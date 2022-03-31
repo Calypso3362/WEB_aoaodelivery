@@ -1,0 +1,785 @@
+<html>
+  <head>
+
+    	<meta charset="utf-8">
+      <link rel="stylesheet" media="all" href="https://cdn.shoplineapp.com/assets/common-f47625baea59b7f28766c213f44af5679a3f7198f77cf8bb89041274db97940a.css">
+      <link rel="stylesheet" media="all" href="https://cdn.shoplineapp.com/assets/application-6f3b55f8b8d864ba63c7dfe842d4d69459c535d0e99fe9d00ab5fa8c5dffe250.css">
+      <link rel="stylesheet" media="all" href="https://cdn.shoplineapp.com/assets/themes/slate-b6f9c73311a1041d6bd6386ce8911939cad346fdc954b1c089f947227c81ae99.css">
+      <!--ICON-->
+      <link rel="icon" type="image/png" href="https://aoaodelivery/image/icon.jpg">
+      <script src="../shopping_cart.js"></script>
+      <link rel="stylesheet" type="text/css" href="../footer.css">
+
+      <title>海鮮</title>
+
+
+      <meta name="description" content="海鮮">
+
+      <style media="screen">
+      .fixed-menu-wrapper{
+        position: relative;
+        margin-top: 0.5%;
+        z-index: 3;
+      }
+      .cart-btn{
+        right: 3px;
+        font-size: 13px;
+        border-radius: 3px;
+        border: 1px solid #aaa;
+        padding: 5px 8px;
+        font-weight: 700;
+        position: fixed;
+      }
+      .media-btn{
+        margin-left: 0.1%;
+        margin-right: 0.1%;
+        z-index:5;
+      }
+      .media-wrapper{
+        margin-left: 10%;
+        width: 10%;
+        position: fixed;
+      }
+      </style>
+  </head>
+  <body onload="genCart()">
+
+
+    <div class="fixed-menu-wrapper" id="fixed-menu">
+      <div class="mobile_btn_container" id="mobile_menu_btn" onclick="myFunction(this)">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+      </div>
+      <span class="media-wrapper">
+        <a class="media-btn" href="https://www.facebook.com/wishao.hk/"><i class="fa fa-facebook-square"></i></a>
+        <a class="media-btn" href="https://www.instagram.com/aoao.delivery/"><i class="fa fa-instagram"></i></a>
+        <a class="media-btn" href="https://www.instagram.com/aoao.delivery/"><i class="fa fa-envelope"></i></a>
+      </span>
+
+      <img src="../image/icon.png" id="img_mobile">
+
+      <a class="cart-btn" onclick="OpenCart()">
+          <span class="fa fa-shopping-cart"></span>
+          <span>購物車</span>
+          <span>
+            <span>(</span>
+            <span id="change-quantity">0</span>
+            <span>)</span>
+          </span>
+      </a>
+    </div>
+    <!--scroll down menu start-->
+    <div id="navbar_div">
+
+        <a href="https://aoaodelivery.com/" id="scrolllink"><img src="../image/icon.png">
+        </a>
+        <ul>
+      <li link-highlight="/">
+        <a link-highlight="/" href="https://aoaodelivery.com/" target="" ng-non-bindable="">首頁</a>
+      </li>
+    <!-- Has dropdown links -->
+      <!-- doesn't have dropdown links -->
+      <li link-highlight="catering_set">
+        <a link-highlight="catering_set" href="catering_set.html" target="" ng-non-bindable="">多人到會套餐</a>
+      </li>
+    <!-- Has dropdown links -->
+      <li class="nav-dropdown" link-highlight="alacarte">
+        <a class="nav-dropdown-toggle" id="herepress" link-highlight="alacarte" href="alacarte.html" target="" ng-non-bindable="">單點到會美食 <span class="caret" id="dropp"></span></a>
+        <ul class="nav-dropdown-menu" id="herecome">
+              <li link-highlight="">
+                <a link-highlight="" href="salad.html" target="" ng-non-bindable="">沙律&nbsp/&nbsp小食</a>
+              </li>
+            <li link-highlight="">
+              <a link-highlight="" href="meat.html" target="" ng-non-bindable="">肉類</a>
+            </li>
+            <li link-highlight="">
+              <a link-highlight="" href="seafood.html" target="" ng-non-bindable="">海鮮</a>
+            </li>
+            <li link-highlight="">
+              <a link-highlight="" href="pastas.html" target="" ng-non-bindable="">意粉</a>
+            </li>
+            <li link-highlight="">
+              <a link-highlight="" href="risotto.html" target="" ng-non-bindable="">意大利飯</a>
+            </li>
+            <li link-highlight="">
+              <a link-highlight="" href="dessert.html" target="" ng-non-bindable="">甜品</a>
+            </li>
+            <li link-highlight="">
+              <a link-highlight="" href="drinks.html" target="" ng-non-bindable="">飲品</a>
+            </li>
+            <li link-highlight="">
+              <a link-highlight="" href="tableware.html" target="" ng-non-bindable="">額外餐具</a>
+            </li>
+        </ul>
+      </li>
+      <li >
+        <a  href="../pages/delivery.html" target="" ng-non-bindable="">運送服務方式</a>
+      </li>
+      <li l>
+        <a  href="../pages/payment.html" target="" ng-non-bindable="">付款服務方式</a>
+      </li>
+      <li >
+        <a  href="../pages/QnA.html" target="" ng-non-bindable="">常見問題</a>
+      </li>
+      </ul>
+    </div>
+    <!--scroll down menu end-->
+    <!--mobile menu start-->
+
+        <div id="mySidenav" class="sidenav">
+          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+          <li link-highlight="/">
+            <a link-highlight="/" href="https://aoaodelivery.com/" target="" ng-non-bindable="">首頁</a>
+          </li>
+        <!-- Has dropdown links -->
+          <!-- doesn't have dropdown links -->
+          <li link-highlight="catering_set">
+            <a link-highlight="catering_set" href="catering_set.html" target="" ng-non-bindable="">多人到會套餐</a>
+          </li>
+        <!-- Has dropdown links -->
+          <li class="nav-dropdown" link-highlight="alacarte">
+            <a class="nav-dropdown-toggle" link-highlight="alacarte" href="alacarte.html" target="" ng-non-bindable="">單點到會美食 <span class="caret"></span></a>
+            <ul class="nav-dropdown-menu">
+
+                    <li link-highlight="">
+                      <a link-highlight="" href="salad.html" target="" ng-non-bindable="">沙律&nbsp/&nbsp小食</a>
+                    </li>
+                <li link-highlight="">
+                  <a link-highlight="" href="meat.html" target="" ng-non-bindable="">肉類</a>
+                </li>
+                <li link-highlight="">
+                  <a link-highlight="" href="seafood.html" target="" ng-non-bindable="">海鮮</a>
+                </li>
+                <li link-highlight="">
+                  <a link-highlight="" href="pastas.html" target="" ng-non-bindable="">意粉</a>
+                </li>
+                <li link-highlight="">
+                  <a link-highlight="" href="risotto.html" target="" ng-non-bindable="">意大利飯</a>
+                </li>
+                <li link-highlight="">
+                  <a link-highlight="" href="dessert.html" target="" ng-non-bindable="">甜品</a>
+                </li>
+                <li link-highlight="">
+                  <a link-highlight="" href="drinks.html" target="" ng-non-bindable="">飲品</a>
+                </li>
+                <li link-highlight="">
+                  <a link-highlight="" href="tableware.html" target="" ng-non-bindable="">額外餐具</a>
+                </li>
+            </ul>
+          </li>
+          <li >
+            <a  href="../pages/delivery.html" target="" ng-non-bindable="">運送服務方式</a>
+          </li>
+          <li l>
+            <a  href="../pages/payment.html" target="" ng-non-bindable="">付款服務方式</a>
+          </li>
+          <li >
+            <a  href="../pages/QnA.html" target="" ng-non-bindable="">常見問題</a>
+          </li>
+          </ul>
+        </div>
+        <!--mobile menu end-->
+
+
+        <!--popup window css start-->
+        <style>
+        .Cart-shadow{
+          width: 100%;
+          height: 100%;
+          background: grey;
+          z-index: 8;
+          position: absolute;
+          opacity: 0.7;
+          display:none;
+        }
+        .Cart-Container{
+          width: 70%;
+          height: 80vh;
+          background-color: #BF6B59;
+          border-radius: 20px;
+          box-shadow: 0px 25px 40px #1687d933;
+          left: 15%;
+          top: 2.5%;
+          position: absolute;
+          z-index: 10;
+          display: none;
+        }
+        .scart-header{
+          margin: auto;
+          width: 90%;
+          height: 15%;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+        }
+        .scart-heading{
+          font-size: 20px;
+          font-family: ‘Open Sans’;
+          font-weight: 700;
+          color: #2F3841;
+        }
+        .scart-remove{
+          font-size: 14px;
+          font-family: ‘Open Sans’;
+          font-weight: 600;
+          color: #FFF9E3;
+          cursor: pointer;
+          border-bottom: 1px solid #FFFFFF;
+        }
+        .scart-items{
+          width: 100%;
+          margin: auto;
+        }
+        .scart-image{
+          float: left;
+          width: 15%;
+          text-align: right;
+          height:100px;
+        }
+        .scart-image>img{
+          width: 100px;
+          height: 100px;
+          margin-right: 10px;
+        }
+        .scart-items-about{
+          float: right;
+          width: 85%;
+          height: 100px;
+        }
+        .scart-items-title{
+          font-size: 24px;
+          font-weight: bold;
+
+        }
+        .scart-remove-item{
+          text-align: left;
+        }
+        /*change css of delete links*/
+        #scart-remove-item-link-smallset{
+          font-weight: lighter;
+          text-decoration: none;
+          color: #E7DECC;
+          cursor: pointer;
+        }
+        .scart-items-wrapper{
+          position:absolute;
+          width:100%;
+        }
+        </style>
+        <!--popup window css end-->
+
+
+
+        <!--popup window script start-->
+        <script type="text/javascript">
+          function closeCart(){
+            if (Shop_Cart_Open){
+              document.getElementById('Cart-Container-id').style.display= "none";
+              document.getElementById('Cart-shadow-id').style.display= "none";
+              Shop_Cart_Open=false;
+            }
+          }
+
+        </script>
+
+        <!--popup window script end-->
+
+
+        <!--shop cart pop-up start-->
+
+
+        <div class="Cart-shadow" id="Cart-shadow-id" onclick="closeCart()" ></div>
+        <div class="Cart-Container" id="Cart-Container-id" >
+          <div class="scart-header">
+            <h3 class="scart-heading">購物車</h3>
+            <h5 class="scart-remove" onclick="clearAllItems()">清除所有</h5>
+          </div>
+
+
+
+          <!--variate part-->
+          <div class="scart-items-wrapper" id="scart-item-wrap">
+          </div>
+
+
+
+
+          <div class="scart-checkout-wrapper" style="position:absolute;width:100%; bottom:2%;">
+            <hr style="width: 66%;float: right;margin-right: 5%;">
+            <div class=”scart-checkout” style="float:right;width:38%;margin-right:5%;">
+              <div class=”scart-total” style="width: 100%; display: flex; justify-content: space-between;">
+                <div>
+                  <div class=”scart-subtotal” style="font-size: 22px; font-family: ‘Open Sans’; font-weight: 700; color: #202020;">總數</div>
+                  <div class=”scart-items-total” style="font-size: 16px; font-family: ‘Open Sans’; font-weight: 500; color: #F0F0F0; line-height: 10px;">件數: <span class="scart-items-quantity" id="quantity-for-items"></span></div>
+                </div>
+                <div class=”scart-total-price” id="price-for-scart"style="font-size: 36px;font-family: ‘Open Sans’;font-weight: 900;color: #202020;"></div>
+              </div>
+              <button class=”scart-button” style="margin-top: 5px;width: 100%;height: 40px;border: none;background: linear-gradient(to bottom right, #B8D7FF, #8EB7EB);border-radius: 20px;cursor: pointer;font-size: 16px;font-family: ‘Open Sans’;font-weight: 600;color: #202020;" onclick="checkoutConfirm()">訂單結帳</button>
+            </div>
+          </div>
+
+        </div>
+
+        <!--shop cart pop-up end-->
+
+
+
+
+        <nav class="nav-bar" id="nav_nav_wrap">
+
+        <div class="navbar-wrapper" >
+          <div class="navbar hidden-xs" role="navigation">
+            <div class="navbar-header-wrapper">
+              <div class="container">
+                <div class="navbar-header">
+                  <a href="https://aoaodelivery.com/">
+                    <img src="../image/icon.png" class="logo-image sl-lazy-image" data-resizing-segment="140" data-size="x280">
+                  </a>
+                </div>
+              </div> <!--container-->
+            </div>
+            <div class="navbar-menu-wrapper">
+              <div class="container">
+                <div class="navbar-menu hidden-xs">
+                  <ul class="text-primary-color">
+        <!-- Has dropdown links -->
+          <!-- doesn't have dropdown links -->
+          <li link-highlight="/">
+            <a link-highlight="/" href="https://aoaodelivery.com/" target="" ng-non-bindable="">首頁</a>
+          </li>
+        <!-- Has dropdown links -->
+          <!-- doesn't have dropdown links -->
+          <li link-highlight="catering_set">
+            <a link-highlight="catering_set" href="catering_set.html" target="" ng-non-bindable="">多人到會套餐</a>
+          </li>
+        <!-- Has dropdown links -->
+          <li class="nav-dropdown" link-highlight="alacarte">
+            <a class="nav-dropdown-toggle" link-highlight="alacarte" href="alacarte.html" target="" ng-non-bindable="">單點到會美食 <span class="caret"></span></a>
+            <ul class="nav-dropdown-menu">
+
+                    <li link-highlight="">
+                      <a link-highlight="" href="salad.html" target="" ng-non-bindable="">沙律&nbsp/&nbsp小食</a>
+                    </li>
+                <li link-highlight="">
+                  <a link-highlight="" href="meat.html" target="" ng-non-bindable="">肉類</a>
+                </li>
+                <li link-highlight="">
+                  <a link-highlight="" href="seafood.html" target="" ng-non-bindable="">海鮮</a>
+                </li>
+                <li link-highlight="">
+                  <a link-highlight="" href="pastas.html" target="" ng-non-bindable="">意粉</a>
+                </li>
+                <li link-highlight="">
+                  <a link-highlight="" href="risotto.html" target="" ng-non-bindable="">意大利飯</a>
+                </li>
+                <li link-highlight="">
+                  <a link-highlight="" href="dessert.html" target="" ng-non-bindable="">甜品</a>
+                </li>
+                <li link-highlight="">
+                  <a link-highlight="" href="drinks.html" target="" ng-non-bindable="">飲品</a>
+                </li>
+                <li link-highlight="">
+                  <a link-highlight="" href="tableware.html" target="" ng-non-bindable="">額外餐具</a>
+                </li>
+            </ul>
+          </li>
+          <li >
+            <a  href="../pages/delivery.html" target="" ng-non-bindable="">運送服務方式</a>
+          </li>
+          <li l>
+            <a  href="../pages/payment.html" target="" ng-non-bindable="">付款服務方式</a>
+          </li>
+          <li >
+            <a  href="../pages/QnA.html" target="" ng-non-bindable="">常見問題</a>
+          </li>
+        </ul>
+                </div>
+              </div> <!--container-->
+            </div>
+          </div><!--navbar-->
+        </div><!--navbar-wrapper-->
+    </nav>
+
+
+
+
+
+<!--main start-->
+<div class="body-content-wrapper" id="body-content" >
+  <div class="col-md-9 animate-show product-list-container" style="margin-left:130px;margin-right:130px;">
+    <div class="page-bar" style="margin-bottom: 20px;">
+
+      <!-- Breadcrumb -->
+      <ol class="breadcrumb">
+            <li class="text-primary-color dark-primary">
+              <a href="/products">全部商品</a>
+            </li>
+            <li class="text-primary-color dark-primary">
+              <a href="">單點到會美食</a>
+            </li>
+            <li class="active" ng-non-bindable="">
+              <h1>海鮮</h1>
+            </li>
+        </ol>
+
+    </div>
+  <div class"main_content_wrapper">
+      <!-- Main section start -->
+      <div>
+        <ul class="
+            boxify-container
+
+          ">
+            <li class="boxify-item product-item                           ng-isolate-scope" ga-product="{&quot;id&quot;:&quot;61b032b96e9088001750c525&quot;,&quot;sku&quot;:null,&quot;variations&quot;:&quot;{\u0026quot;fields_translations\u0026quot;:{\u0026quot;en\u0026quot;:[\u0026quot;\u0026quot;],\u0026quot;zh-hant\u0026quot;:[\u0026quot;S (30粒)\u0026quot;]},\u0026quot;key\u0026quot;:\u0026quot;61b032b94f0942001d628f4c\u0026quot;,\u0026quot;media_id\u0026quot;:null,\u0026quot;quantity\u0026quot;:0,\u0026quot;variant_option_ids\u0026quot;:[\u0026quot;61b032b96e9088001750c523\u0026quot;],\u0026quot;barcode_type\u0026quot;:\u0026quot;Code 128\u0026quot;,\u0026quot;weight\u0026quot;:0.0,\u0026quot;price\u0026quot;:{\u0026quot;cents\u0026quot;:15800,\u0026quot;currency_symbol\u0026quot;:\u0026quot;HK$\u0026quot;,\u0026quot;currency_iso\u0026quot;:\u0026quot;HKD\u0026quot;,\u0026quot;label\u0026quot;:\u0026quot;HK$158.00\u0026quot;,\u0026quot;dollars\u0026quot;:158.0},\u0026quot;member_price\u0026quot;:{\u0026quot;cents\u0026quot;:0,\u0026quot;currency_symbol\u0026quot;:\u0026quot;HK$\u0026quot;,\u0026quot;currency_iso\u0026quot;:\u0026quot;HKD\u0026quot;,\u0026quot;label\u0026quot;:\u0026quot;\u0026quot;,\u0026quot;dollars\u0026quot;:0.0},\u0026quot;price_sale\u0026quot;:{\u0026quot;cents\u0026quot;:0,\u0026quot;currency_symbol\u0026quot;:\u0026quot;HK$\u0026quot;,\u0026quot;currency_iso\u0026quot;:\u0026quot;HKD\u0026quot;,\u0026quot;label\u0026quot;:\u0026quot;\u0026quot;,\u0026quot;dollars\u0026quot;:0.0},\u0026quot;cost\u0026quot;:{\u0026quot;cents\u0026quot;:0,\u0026quot;currency_symbol\u0026quot;:\u0026quot;HK$\u0026quot;,\u0026quot;currency_iso\u0026quot;:\u0026quot;HKD\u0026quot;,\u0026quot;label\u0026quot;:\u0026quot;\u0026quot;,\u0026quot;dollars\u0026quot;:0.0},\u0026quot;fields\u0026quot;:[{\u0026quot;name_translations\u0026quot;:{\u0026quot;en\u0026quot;:\u0026quot;\u0026quot;,\u0026quot;zh-hant\u0026quot;:\u0026quot;S (30粒)\u0026quot;}}]}&quot;,&quot;title&quot;:&quot;煙三文魚黑魚子凱撒沙律&quot;}">
+
+  <product-item product-id="61b032b96e9088001750c525" ng-class="{'quick-cart-mobile': isMobileTabletWidth()}" class="ng-scope">
+
+      <a href="../products/caesar.html" target="_self" class="quick-cart-item" ng-click="sendGaProductClick('61b032b96e9088001750c525', '', [&quot;{\&quot;key\&quot;:\&quot;61b032b94f0942001d628f4c\&quot;,\&quot;sku\&quot;:null,\&quot;fields_translations\&quot;:{\&quot;en\&quot;:[\&quot;\&quot;],\&quot;zh-hant\&quot;:[\&quot;S (30粒)\&quot;]}}&quot;], '煙三文魚黑魚子凱撒沙律')">
+      <div class="boxify-image-wrapper">
+        <div class="boxify-image center-contain sl-lazy-image  " style="background-image:url(../image/caesar.jpg)">
+
+
+
+              <div class="btn-add-to-cart js-btn-quick-cart-add-to-cart hidden-xs" ng-class="{'hidden': isMobileTabletWidth()}"> 加入購物車 </div>
+        </div>
+      </div>
+    <div class="info-box">
+      <div class="info-box-inner-wrapper">
+        <div class="title text-primary-color title-container ellipsis " data-max-height="45" ng-non-bindable="" style="word-wrap: break-word;">
+          煙三文魚黑魚子凱撒沙律（1盆）
+        </div>
+        <div class="quick-cart-price">
+              <!-- variations -->
+                <div class="price-sale price " style="word-wrap: break-word; white-space: normal;">
+                  HK$188.00
+                </div>
+        </div>
+
+
+          <span class="btn-add-to-cart js-btn-quick-cart-add-to-cart mobile-cart hidden" ng-class="{'hidden': !isMobileTabletWidth()}">
+            <i class="fa fa-shopping-cart"></i>
+          </span>
+
+      </div>
+    </div>
+  </a>
+  </product-item>
+
+            </li>
+            <li class="boxify-item product-item                           ng-isolate-scope" ga-product="{&quot;id&quot;:&quot;61a9e62bde5e53001d062fb0&quot;,&quot;sku&quot;:null,&quot;variations&quot;:&quot;{\u0026quot;fields_translations\u0026quot;:{\u0026quot;en\u0026quot;:[\u0026quot;\u0026quot;],\u0026quot;zh-hant\u0026quot;:[\u0026quot;S (12條)\u0026quot;]},\u0026quot;sku\u0026quot;:null,\u0026quot;key\u0026quot;:\u0026quot;61af256a8cd24c001d36b373\u0026quot;,\u0026quot;media_id\u0026quot;:null,\u0026quot;location_id\u0026quot;:null,\u0026quot;quantity\u0026quot;:0,\u0026quot;variant_option_ids\u0026quot;:[\u0026quot;61af256b928c2b00115a750a\u0026quot;],\u0026quot;barcode_type\u0026quot;:\u0026quot;Code 128\u0026quot;,\u0026quot;weight\u0026quot;:0.0,\u0026quot;price\u0026quot;:{\u0026quot;cents\u0026quot;:14800,\u0026quot;currency_symbol\u0026quot;:\u0026quot;HK$\u0026quot;,\u0026quot;currency_iso\u0026quot;:\u0026quot;HKD\u0026quot;,\u0026quot;label\u0026quot;:\u0026quot;HK$148.00\u0026quot;,\u0026quot;dollars\u0026quot;:148.0},\u0026quot;member_price\u0026quot;:null,\u0026quot;price_sale\u0026quot;:null,\u0026quot;cost\u0026quot;:null,\u0026quot;fields\u0026quot;:[{\u0026quot;name_translations\u0026quot;:{\u0026quot;en\u0026quot;:\u0026quot;\u0026quot;,\u0026quot;zh-hant\u0026quot;:\u0026quot;S (12條)\u0026quot;}}]}&quot;,&quot;title&quot;:&quot;泰式汁芫荽柚子大蝦蟹籽沙律&quot;}">
+
+  <product-item product-id="61a9e62bde5e53001d062fb0" ng-class="{'quick-cart-mobile': isMobileTabletWidth()}" class="ng-scope">
+
+      <a href="../products/shrimpsalad.html" target="_self" class="quick-cart-item" ng-click="sendGaProductClick('61a9e62bde5e53001d062fb0', '', [&quot;{\&quot;key\&quot;:\&quot;61af256a8cd24c001d36b373\&quot;,\&quot;sku\&quot;:null,\&quot;fields_translations\&quot;:{\&quot;en\&quot;:[\&quot;\&quot;],\&quot;zh-hant\&quot;:[\&quot;S (12條)\&quot;]}}&quot;], '泰式汁芫荽柚子大蝦蟹籽沙律')">
+      <div class="boxify-image-wrapper">
+        <div class="boxify-image center-contain sl-lazy-image  " style="background-image:url(../image/shrimpsalad.jpg)">
+
+
+
+              <div class="btn-add-to-cart js-btn-quick-cart-add-to-cart hidden-xs" ng-class="{'hidden': isMobileTabletWidth()}"> 加入購物車 </div>
+        </div>
+      </div>
+    <div class="info-box">
+      <div class="info-box-inner-wrapper">
+        <div class="title text-primary-color title-container ellipsis " data-max-height="45" ng-non-bindable="" style="word-wrap: break-word;">
+          泰式汁芫荽柚子大蝦蟹籽沙律（1盆）
+
+        </div>
+        <div class="quick-cart-price">
+              <!-- variations -->
+                <div class="price-sale price " style="word-wrap: break-word; white-space: normal;">
+                  HK$198.00
+                </div>
+        </div>
+
+
+          <span class="btn-add-to-cart js-btn-quick-cart-add-to-cart mobile-cart hidden" ng-class="{'hidden': !isMobileTabletWidth()}">
+            <i class="fa fa-shopping-cart"></i>
+          </span>
+
+      </div>
+    </div>
+  </a>
+  </product-item>
+
+            </li>
+            <li class="boxify-item product-item                           ng-isolate-scope" ga-product="{&quot;id&quot;:&quot;61a9e772e41b4600299626df&quot;,&quot;sku&quot;:null,&quot;variations&quot;:&quot;{\u0026quot;fields_translations\u0026quot;:{\u0026quot;en\u0026quot;:[\u0026quot;\u0026quot;],\u0026quot;zh-hant\u0026quot;:[\u0026quot;S (4份)\u0026quot;]},\u0026quot;sku\u0026quot;:null,\u0026quot;key\u0026quot;:\u0026quot;61af22382c5cba0011303011\u0026quot;,\u0026quot;media_id\u0026quot;:null,\u0026quot;location_id\u0026quot;:null,\u0026quot;quantity\u0026quot;:0,\u0026quot;variant_option_ids\u0026quot;:[\u0026quot;61af22380a19a2002c6719bf\u0026quot;],\u0026quot;barcode_type\u0026quot;:\u0026quot;Code 128\u0026quot;,\u0026quot;weight\u0026quot;:0.0,\u0026quot;price\u0026quot;:{\u0026quot;cents\u0026quot;:9800,\u0026quot;currency_symbol\u0026quot;:\u0026quot;HK$\u0026quot;,\u0026quot;currency_iso\u0026quot;:\u0026quot;HKD\u0026quot;,\u0026quot;label\u0026quot;:\u0026quot;HK$98.00\u0026quot;,\u0026quot;dollars\u0026quot;:98.0},\u0026quot;member_price\u0026quot;:null,\u0026quot;price_sale\u0026quot;:null,\u0026quot;cost\u0026quot;:null,\u0026quot;fields\u0026quot;:[{\u0026quot;name_translations\u0026quot;:{\u0026quot;en\u0026quot;:\u0026quot;\u0026quot;,\u0026quot;zh-hant\u0026quot;:\u0026quot;S (4份)\u0026quot;}}]}&quot;,&quot;title&quot;:&quot;日本松葉蟹芒果牛油果沙律&quot;}">
+
+  <product-item product-id="61a9e772e41b4600299626df" ng-class="{'quick-cart-mobile': isMobileTabletWidth()}" class="ng-scope">
+
+      <a href="../products/avocado.html" target="_self" class="quick-cart-item" ng-click="sendGaProductClick('61a9e772e41b4600299626df', '', [&quot;{\&quot;key\&quot;:\&quot;61af22382c5cba0011303011\&quot;,\&quot;sku\&quot;:null,\&quot;fields_translations\&quot;:{\&quot;en\&quot;:[\&quot;\&quot;],\&quot;zh-hant\&quot;:[\&quot;S (4份)\&quot;]}}&quot;], '日本松葉蟹芒果牛油果沙律')">
+      <div class="boxify-image-wrapper">
+        <div class="boxify-image center-contain sl-lazy-image  " style="background-image:url(../image/avocado.jpg)">
+
+
+
+              <div class="btn-add-to-cart js-btn-quick-cart-add-to-cart hidden-xs" ng-class="{'hidden': isMobileTabletWidth()}"> 加入購物車 </div>
+        </div>
+      </div>
+    <div class="info-box">
+      <div class="info-box-inner-wrapper">
+        <div class="title text-primary-color title-container ellipsis " data-max-height="45" ng-non-bindable="" style="word-wrap: break-word;">
+          日本松葉蟹芒果牛油果沙律（1盆）
+        </div>
+        <div class="quick-cart-price">
+              <!-- variations -->
+                <div class="price-sale price " style="word-wrap: break-word; white-space: normal;">
+                  HK$208.00
+                </div>
+        </div>
+
+
+          <span class="btn-add-to-cart js-btn-quick-cart-add-to-cart mobile-cart hidden" ng-class="{'hidden': !isMobileTabletWidth()}">
+            <i class="fa fa-shopping-cart"></i>
+          </span>
+
+      </div>
+    </div>
+  </a>
+  </product-item>
+
+            </li>
+
+            <li class="boxify-item product-item                           ng-isolate-scope" ga-product="{&quot;id&quot;:&quot;61a9dedcab19f60032311e42&quot;,&quot;sku&quot;:null,&quot;variations&quot;:&quot;{\u0026quot;fields_translations\u0026quot;:{\u0026quot;en\u0026quot;:[\u0026quot;\u0026quot;],\u0026quot;zh-hant\u0026quot;:[\u0026quot;S(4份)\u0026quot;]},\u0026quot;sku\u0026quot;:null,\u0026quot;key\u0026quot;:\u0026quot;61af310cc2647c00184d846d\u0026quot;,\u0026quot;media_id\u0026quot;:null,\u0026quot;location_id\u0026quot;:null,\u0026quot;quantity\u0026quot;:0,\u0026quot;variant_option_ids\u0026quot;:[\u0026quot;61af310c7279c700326ca5b1\u0026quot;],\u0026quot;barcode_type\u0026quot;:\u0026quot;Code 128\u0026quot;,\u0026quot;weight\u0026quot;:0.0,\u0026quot;price\u0026quot;:{\u0026quot;cents\u0026quot;:9800,\u0026quot;currency_symbol\u0026quot;:\u0026quot;HK$\u0026quot;,\u0026quot;currency_iso\u0026quot;:\u0026quot;HKD\u0026quot;,\u0026quot;label\u0026quot;:\u0026quot;HK$98.00\u0026quot;,\u0026quot;dollars\u0026quot;:98.0},\u0026quot;member_price\u0026quot;:null,\u0026quot;price_sale\u0026quot;:null,\u0026quot;cost\u0026quot;:null,\u0026quot;fields\u0026quot;:[{\u0026quot;name_translations\u0026quot;:{\u0026quot;en\u0026quot;:\u0026quot;\u0026quot;,\u0026quot;zh-hant\u0026quot;:\u0026quot;S(4份)\u0026quot;}}]}&quot;,&quot;title&quot;:&quot;日本呑拿魚腩蓉福袋&quot;}">
+
+  <product-item product-id="61a9dedcab19f60032311e42" ng-class="{'quick-cart-mobile': isMobileTabletWidth()}" class="ng-scope">
+
+      <a href="../products/tunapack.html" target="_self" class="quick-cart-item" ng-click="sendGaProductClick('61a9dedcab19f60032311e42', '', [&quot;{\&quot;key\&quot;:\&quot;61af310cc2647c00184d846d\&quot;,\&quot;sku\&quot;:null,\&quot;fields_translations\&quot;:{\&quot;en\&quot;:[\&quot;\&quot;],\&quot;zh-hant\&quot;:[\&quot;S(4份)\&quot;]}}&quot;], '日本呑拿魚腩蓉福袋')">
+      <div class="boxify-image-wrapper">
+        <div class="boxify-image center-contain sl-lazy-image  " style="background-image:url(../image/tunapack.jpg)">
+
+
+
+              <div class="btn-add-to-cart js-btn-quick-cart-add-to-cart hidden-xs" ng-class="{'hidden': isMobileTabletWidth()}"> 加入購物車 </div>
+        </div>
+      </div>
+    <div class="info-box">
+      <div class="info-box-inner-wrapper">
+        <div class="title text-primary-color title-container ellipsis " data-max-height="45" ng-non-bindable="" style="word-wrap: break-word;">
+          日本呑拿魚腩蓉福袋（8件）
+        </div>
+        <div class="quick-cart-price">
+              <!-- variations -->
+                <div class="price-sale price " style="word-wrap: break-word; white-space: normal;">
+                  HK$198.00
+                </div>
+        </div>
+
+
+          <span class="btn-add-to-cart js-btn-quick-cart-add-to-cart mobile-cart hidden" ng-class="{'hidden': !isMobileTabletWidth()}">
+            <i class="fa fa-shopping-cart"></i>
+          </span>
+
+      </div>
+    </div>
+  </a>
+  </product-item>
+
+            </li>
+            <li class="boxify-item product-item                           ng-isolate-scope" ga-product="{&quot;id&quot;:&quot;61a70fec52a3c20032216588&quot;,&quot;sku&quot;:null,&quot;variations&quot;:&quot;{\u0026quot;fields_translations\u0026quot;:{\u0026quot;en\u0026quot;:[\u0026quot;\u0026quot;],\u0026quot;zh-hant\u0026quot;:[\u0026quot;S (4件)\u0026quot;]},\u0026quot;sku\u0026quot;:null,\u0026quot;key\u0026quot;:\u0026quot;61af2e47c2647c2aba4d83fd\u0026quot;,\u0026quot;media_id\u0026quot;:null,\u0026quot;location_id\u0026quot;:null,\u0026quot;quantity\u0026quot;:0,\u0026quot;variant_option_ids\u0026quot;:[\u0026quot;61af2e47152af9001d774546\u0026quot;],\u0026quot;barcode_type\u0026quot;:\u0026quot;Code 128\u0026quot;,\u0026quot;weight\u0026quot;:0.0,\u0026quot;price\u0026quot;:{\u0026quot;cents\u0026quot;:29800,\u0026quot;currency_symbol\u0026quot;:\u0026quot;HK$\u0026quot;,\u0026quot;currency_iso\u0026quot;:\u0026quot;HKD\u0026quot;,\u0026quot;label\u0026quot;:\u0026quot;HK$298.00\u0026quot;,\u0026quot;dollars\u0026quot;:298.0},\u0026quot;member_price\u0026quot;:null,\u0026quot;price_sale\u0026quot;:null,\u0026quot;cost\u0026quot;:null,\u0026quot;fields\u0026quot;:[{\u0026quot;name_translations\u0026quot;:{\u0026quot;en\u0026quot;:\u0026quot;\u0026quot;,\u0026quot;zh-hant\u0026quot;:\u0026quot;S (4件)\u0026quot;}}]}&quot;,&quot;title&quot;:&quot;意大利香草醬帶子海蝦粒意大利飯&quot;}">
+
+  <product-item product-id="61a70fec52a3c20032216588" ng-class="{'quick-cart-mobile': isMobileTabletWidth()}" class="ng-scope">
+
+      <a href="../products/shrimprisotto.html" target="_self" class="quick-cart-item" ng-click="sendGaProductClick('61a70fec52a3c20032216588', '', [&quot;{\&quot;key\&quot;:\&quot;61af2e47c2647c2aba4d83fd\&quot;,\&quot;sku\&quot;:null,\&quot;fields_translations\&quot;:{\&quot;en\&quot;:[\&quot;\&quot;],\&quot;zh-hant\&quot;:[\&quot;S (4件)\&quot;]}}&quot;], '意大利香草醬帶子海蝦粒意大利飯')">
+      <div class="boxify-image-wrapper">
+        <div class="boxify-image center-contain sl-lazy-image  " style="background-image:url(../image/shrimprisotto.jpg)">
+
+
+
+              <div class="btn-add-to-cart js-btn-quick-cart-add-to-cart hidden-xs" ng-class="{'hidden': isMobileTabletWidth()}"> 加入購物車 </div>
+        </div>
+      </div>
+    <div class="info-box">
+      <div class="info-box-inner-wrapper">
+        <div class="title text-primary-color title-container ellipsis " data-max-height="45" ng-non-bindable="" style="word-wrap: break-word;">
+          意大利香草醬帶子海蝦粒意大利飯（3磅）
+        </div>
+        <div class="quick-cart-price">
+              <!-- variations -->
+                <div class="price-sale price " style="word-wrap: break-word; white-space: normal;">
+                  HK$348.00
+                </div>
+        </div>
+
+
+          <span class="btn-add-to-cart js-btn-quick-cart-add-to-cart mobile-cart hidden" ng-class="{'hidden': !isMobileTabletWidth()}">
+            <i class="fa fa-shopping-cart"></i>
+          </span>
+
+      </div>
+    </div>
+  </a>
+  </product-item>
+
+            </li>
+
+            <li class="boxify-item product-item                           ng-isolate-scope" ga-product="{&quot;id&quot;:&quot;61a711a7a861ca00236b323e&quot;,&quot;sku&quot;:null,&quot;variations&quot;:&quot;{\u0026quot;fields_translations\u0026quot;:{\u0026quot;en\u0026quot;:[\u0026quot;\u0026quot;],\u0026quot;zh-hant\u0026quot;:[\u0026quot;S 1盤 (約2~3磅)\u0026quot;]},\u0026quot;sku\u0026quot;:null,\u0026quot;key\u0026quot;:\u0026quot;61af3031c0ba8c0008b18dd3\u0026quot;,\u0026quot;media_id\u0026quot;:null,\u0026quot;location_id\u0026quot;:null,\u0026quot;quantity\u0026quot;:0,\u0026quot;variant_option_ids\u0026quot;:[\u0026quot;61af3031022407002c2e69c6\u0026quot;],\u0026quot;barcode_type\u0026quot;:\u0026quot;Code 128\u0026quot;,\u0026quot;weight\u0026quot;:0.0,\u0026quot;price\u0026quot;:{\u0026quot;cents\u0026quot;:32800,\u0026quot;currency_symbol\u0026quot;:\u0026quot;HK$\u0026quot;,\u0026quot;currency_iso\u0026quot;:\u0026quot;HKD\u0026quot;,\u0026quot;label\u0026quot;:\u0026quot;HK$328.00\u0026quot;,\u0026quot;dollars\u0026quot;:328.0},\u0026quot;member_price\u0026quot;:null,\u0026quot;price_sale\u0026quot;:null,\u0026quot;cost\u0026quot;:null,\u0026quot;fields\u0026quot;:[{\u0026quot;name_translations\u0026quot;:{\u0026quot;en\u0026quot;:\u0026quot;\u0026quot;,\u0026quot;zh-hant\u0026quot;:\u0026quot;S 1盤 (約2~3磅)\u0026quot;}}]}&quot;,&quot;title&quot;:&quot;日式西京燒龍脷柳配炸薯角，炒雜菜&quot;}">
+
+  <product-item product-id="61a711a7a861ca00236b323e" ng-class="{'quick-cart-mobile': isMobileTabletWidth()}" class="ng-scope">
+
+      <a href="../products/fillet.html" target="_self" class="quick-cart-item" ng-click="sendGaProductClick('61a711a7a861ca00236b323e', '', [&quot;{\&quot;key\&quot;:\&quot;61af3031c0ba8c0008b18dd3\&quot;,\&quot;sku\&quot;:null,\&quot;fields_translations\&quot;:{\&quot;en\&quot;:[\&quot;\&quot;],\&quot;zh-hant\&quot;:[\&quot;S 1盤 (約2~3磅)\&quot;]}}&quot;], '日式西京燒龍脷柳配炸薯角，炒雜菜')">
+      <div class="boxify-image-wrapper">
+        <div class="boxify-image center-contain sl-lazy-image  " style="background-image:url(../image/fillet.jpg)">
+
+
+
+              <div class="btn-add-to-cart js-btn-quick-cart-add-to-cart hidden-xs" ng-class="{'hidden': isMobileTabletWidth()}"> 加入購物車 </div>
+        </div>
+      </div>
+    <div class="info-box">
+      <div class="info-box-inner-wrapper">
+        <div class="title text-primary-color title-container ellipsis " data-max-height="45" ng-non-bindable="" style="word-wrap: break-word;">
+          日式西京燒龍脷柳配炸薯角，炒雜菜（2條）
+        </div>
+        <div class="quick-cart-price">
+              <!-- variations -->
+                <div class="price-sale price " style="word-wrap: break-word; white-space: normal;">
+                  HK$408.00
+                </div>
+        </div>
+
+
+          <span class="btn-add-to-cart js-btn-quick-cart-add-to-cart mobile-cart hidden" ng-class="{'hidden': !isMobileTabletWidth()}">
+            <i class="fa fa-shopping-cart"></i>
+          </span>
+
+      </div>
+    </div>
+  </a>
+  </product-item>
+
+            </li>
+            <li class="boxify-item product-item                           ng-isolate-scope" ga-product="{&quot;id&quot;:&quot;61a711a7a861ca00236b323e&quot;,&quot;sku&quot;:null,&quot;variations&quot;:&quot;{\u0026quot;fields_translations\u0026quot;:{\u0026quot;en\u0026quot;:[\u0026quot;\u0026quot;],\u0026quot;zh-hant\u0026quot;:[\u0026quot;S 1盤 (約2~3磅)\u0026quot;]},\u0026quot;sku\u0026quot;:null,\u0026quot;key\u0026quot;:\u0026quot;61af3031c0ba8c0008b18dd3\u0026quot;,\u0026quot;media_id\u0026quot;:null,\u0026quot;location_id\u0026quot;:null,\u0026quot;quantity\u0026quot;:0,\u0026quot;variant_option_ids\u0026quot;:[\u0026quot;61af3031022407002c2e69c6\u0026quot;],\u0026quot;barcode_type\u0026quot;:\u0026quot;Code 128\u0026quot;,\u0026quot;weight\u0026quot;:0.0,\u0026quot;price\u0026quot;:{\u0026quot;cents\u0026quot;:32800,\u0026quot;currency_symbol\u0026quot;:\u0026quot;HK$\u0026quot;,\u0026quot;currency_iso\u0026quot;:\u0026quot;HKD\u0026quot;,\u0026quot;label\u0026quot;:\u0026quot;HK$328.00\u0026quot;,\u0026quot;dollars\u0026quot;:328.0},\u0026quot;member_price\u0026quot;:null,\u0026quot;price_sale\u0026quot;:null,\u0026quot;cost\u0026quot;:null,\u0026quot;fields\u0026quot;:[{\u0026quot;name_translations\u0026quot;:{\u0026quot;en\u0026quot;:\u0026quot;\u0026quot;,\u0026quot;zh-hant\u0026quot;:\u0026quot;S 1盤 (約2~3磅)\u0026quot;}}]}&quot;,&quot;title&quot;:&quot;日式西京燒龍脷柳配炸薯角，炒雜菜&quot;}">
+
+  <product-item product-id="61a711a7a861ca00236b323e" ng-class="{'quick-cart-mobile': isMobileTabletWidth()}" class="ng-scope">
+
+      <a href="../products/lobster.html" target="_self" class="quick-cart-item" ng-click="sendGaProductClick('61a711a7a861ca00236b323e', '', [&quot;{\&quot;key\&quot;:\&quot;61af3031c0ba8c0008b18dd3\&quot;,\&quot;sku\&quot;:null,\&quot;fields_translations\&quot;:{\&quot;en\&quot;:[\&quot;\&quot;],\&quot;zh-hant\&quot;:[\&quot;S 1盤 (約2~3磅)\&quot;]}}&quot;], '日式西京燒龍脷柳配炸薯角，炒雜菜')">
+      <div class="boxify-image-wrapper">
+        <div class="boxify-image center-contain sl-lazy-image  " style="background-image:url(../image/lobster.jpg)">
+
+
+
+              <div class="btn-add-to-cart js-btn-quick-cart-add-to-cart hidden-xs" ng-class="{'hidden': isMobileTabletWidth()}"> 加入購物車 </div>
+        </div>
+      </div>
+    <div class="info-box">
+      <div class="info-box-inner-wrapper">
+        <div class="title text-primary-color title-container ellipsis " data-max-height="45" ng-non-bindable="" style="word-wrap: break-word;">
+          蒜蓉牛油保雲酥焗龍蝦 (1隻 已開邊)
+        </div>
+        <div class="quick-cart-price">
+              <!-- variations -->
+                <div class="price-sale price " style="word-wrap: break-word; white-space: normal;">
+                  HK$208.00
+                </div>
+        </div>
+
+
+          <span class="btn-add-to-cart js-btn-quick-cart-add-to-cart mobile-cart hidden" ng-class="{'hidden': !isMobileTabletWidth()}">
+            <i class="fa fa-shopping-cart"></i>
+          </span>
+
+      </div>
+    </div>
+  </a>
+  </product-item>
+
+            </li>
+            <li class="boxify-item product-item                           ng-isolate-scope" ga-product="{&quot;id&quot;:&quot;61a711a7a861ca00236b323e&quot;,&quot;sku&quot;:null,&quot;variations&quot;:&quot;{\u0026quot;fields_translations\u0026quot;:{\u0026quot;en\u0026quot;:[\u0026quot;\u0026quot;],\u0026quot;zh-hant\u0026quot;:[\u0026quot;S 1盤 (約2~3磅)\u0026quot;]},\u0026quot;sku\u0026quot;:null,\u0026quot;key\u0026quot;:\u0026quot;61af3031c0ba8c0008b18dd3\u0026quot;,\u0026quot;media_id\u0026quot;:null,\u0026quot;location_id\u0026quot;:null,\u0026quot;quantity\u0026quot;:0,\u0026quot;variant_option_ids\u0026quot;:[\u0026quot;61af3031022407002c2e69c6\u0026quot;],\u0026quot;barcode_type\u0026quot;:\u0026quot;Code 128\u0026quot;,\u0026quot;weight\u0026quot;:0.0,\u0026quot;price\u0026quot;:{\u0026quot;cents\u0026quot;:32800,\u0026quot;currency_symbol\u0026quot;:\u0026quot;HK$\u0026quot;,\u0026quot;currency_iso\u0026quot;:\u0026quot;HKD\u0026quot;,\u0026quot;label\u0026quot;:\u0026quot;HK$328.00\u0026quot;,\u0026quot;dollars\u0026quot;:328.0},\u0026quot;member_price\u0026quot;:null,\u0026quot;price_sale\u0026quot;:null,\u0026quot;cost\u0026quot;:null,\u0026quot;fields\u0026quot;:[{\u0026quot;name_translations\u0026quot;:{\u0026quot;en\u0026quot;:\u0026quot;\u0026quot;,\u0026quot;zh-hant\u0026quot;:\u0026quot;S 1盤 (約2~3磅)\u0026quot;}}]}&quot;,&quot;title&quot;:&quot;日式西京燒龍脷柳配炸薯角，炒雜菜&quot;}">
+
+  <product-item product-id="61a711a7a861ca00236b323e" ng-class="{'quick-cart-mobile': isMobileTabletWidth()}" class="ng-scope">
+
+      <a href="../products/hol.html" target="_self" class="quick-cart-item" ng-click="sendGaProductClick('61a711a7a861ca00236b323e', '', [&quot;{\&quot;key\&quot;:\&quot;61af3031c0ba8c0008b18dd3\&quot;,\&quot;sku\&quot;:null,\&quot;fields_translations\&quot;:{\&quot;en\&quot;:[\&quot;\&quot;],\&quot;zh-hant\&quot;:[\&quot;S 1盤 (約2~3磅)\&quot;]}}&quot;], '日式西京燒龍脷柳配炸薯角，炒雜菜')">
+      <div class="boxify-image-wrapper">
+        <div class="boxify-image center-contain sl-lazy-image  " style="background-image:url(../image/hol.jpg)">
+
+
+
+              <div class="btn-add-to-cart js-btn-quick-cart-add-to-cart hidden-xs" ng-class="{'hidden': isMobileTabletWidth()}"> 加入購物車 </div>
+        </div>
+      </div>
+    <div class="info-box">
+      <div class="info-box-inner-wrapper">
+        <div class="title text-primary-color title-container ellipsis " data-max-height="45" ng-non-bindable="" style="word-wrap: break-word;">
+          花雕酒浸慢煮鮑魚 (8隻)
+        </div>
+        <div class="quick-cart-price">
+              <!-- variations -->
+                <div class="price-sale price " style="word-wrap: break-word; white-space: normal;">
+                  HK$240.00
+                </div>
+        </div>
+
+
+          <span class="btn-add-to-cart js-btn-quick-cart-add-to-cart mobile-cart hidden" ng-class="{'hidden': !isMobileTabletWidth()}">
+            <i class="fa fa-shopping-cart"></i>
+          </span>
+
+      </div>
+    </div>
+  </a>
+  </product-item>
+
+            </li>
+
+          <div class="clear"></div>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!--main end-->
+
+
+
+<!--footer start-->
+
+
+
+<table  class="foot">
+    <tr class="one_row">
+      <td class="foot-lef-col">
+          <h4><span style="font-size:24px;">顧客服務</span></h4>
+          <p><a href="../pages/QnA.html" target="_self"><span>常見問題</span></a></p>
+          <p>​<a href="../pages/delivery.html" target="_self"><span>運送服務方式</span></a></p>
+          <p><a href="../pages/payment.html" target="_self"><span>付款服務方式</span></a></p>
+        </td>
+        <td class="foot-right-col">
+          <h4><span style="font-size:24px;">聯絡我們</span></h4>
+              <ul class="list-unstyled">
+                <li>電話:9887 7619(可whatsapp）</li>
+                <li>時間:12:00-22:00</li>
+                <li>電郵:info@aoaodelivery.com</li>
+              </ul>
+        </td>
+    </tr>
+  </table>
+  <br>
+  <table class="foot">
+    <tr class="warning-container">
+      <td class="warning-wrapper">
+          <p>* 圖片只供參考 *</p>
+          <p>* 未經許可，網站上的圖片及文章不得轉載或引用 *</p>
+          <p>即日外賣急單專線: 9887 7819 (可WhatsApp聯絡)</p>
+          <p>電郵: info@aoaodelivery.com</p>
+        </td>
+    </tr>
+    <tr>  <td class="image-footer">
+            <img alt="HKICL | 轉數快" src="https://www.hkma.gov.hk/media/chi/img/smart-consumers/fps_c.png">
+            <img alt="PAYME " src="https://static.wixstatic.com/media/576ba0_ab6e102b8afe49d59460133760e44e17~mv2.png/v1/fill/w_520,h_520,al_c,q_85,usm_0.66_1.00_0.01/logo_payme_en.webp">
+          </td>
+    </tr>
+    <tr>
+      <td>
+      <p class="text-center"><a href="../pages/aboutus.html" style="background-color: rgb(255, 255, 255); font-size: 16px;" target="_self"><span>關於我們</span></a> | <a href="../pages/terms.html" target="_self"><span>條款及細則 </span></a>| 2022 © AOAODELIVERY</p>
+    </td>
+    </tr>
+
+</table>
+<!--footer end-->
+
+  </body>
+</html>

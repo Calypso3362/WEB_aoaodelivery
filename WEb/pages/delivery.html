@@ -1,0 +1,466 @@
+<html>
+  <head>
+
+    	<meta charset="utf-8">
+      <link rel="stylesheet" media="all" href="https://cdn.shoplineapp.com/assets/common-f47625baea59b7f28766c213f44af5679a3f7198f77cf8bb89041274db97940a.css">
+      <link rel="stylesheet" media="all" href="https://cdn.shoplineapp.com/assets/application-6f3b55f8b8d864ba63c7dfe842d4d69459c535d0e99fe9d00ab5fa8c5dffe250.css">
+      <link rel="stylesheet" media="all" href="https://cdn.shoplineapp.com/assets/themes/slate-b6f9c73311a1041d6bd6386ce8911939cad346fdc954b1c089f947227c81ae99.css">
+      <!--ICON-->
+      <link rel="icon" type="image/png" href="https://aoaodelivery/image/icon.jpg">
+      <script src="../shopping_cart.js"></script>
+      <link rel="stylesheet" type="text/css" href="../footer.css">
+
+      <title>運送服務方式</title>
+
+
+      <meta name="description" content="運送服務方式">
+
+
+      <style media="screen">
+      .fixed-menu-wrapper{
+        position: relative;
+        margin-top: 0.5%;
+        z-index: 3;
+      }
+      .cart-btn{
+        right: 3px;
+        font-size: 13px;
+        border-radius: 3px;
+        border: 1px solid #aaa;
+        padding: 5px 8px;
+        font-weight: 700;
+        position: fixed;
+      }
+      .media-btn{
+        margin-left: 0.1%;
+        margin-right: 0.1%;
+        z-index:5;
+      }
+      .media-wrapper{
+        margin-left: 10%;
+        width: 10%;
+        position: fixed;
+      }
+      </style>
+  </head>
+  <body onload="genCart()">
+
+
+    <div class="fixed-menu-wrapper" id="fixed-menu">
+      <div class="mobile_btn_container" id="mobile_menu_btn" onclick="myFunction(this)">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+      </div>
+      <span class="media-wrapper">
+        <a class="media-btn" href="https://www.facebook.com/wishao.hk/"><i class="fa fa-facebook-square"></i></a>
+        <a class="media-btn" href="https://www.instagram.com/aoao.delivery/"><i class="fa fa-instagram"></i></a>
+        <a class="media-btn" href="https://www.instagram.com/aoao.delivery/"><i class="fa fa-envelope"></i></a>
+      </span>
+
+      <img src="../image/icon.png" id="img_mobile">
+
+      <a class="cart-btn" onclick="OpenCart()">
+          <span class="fa fa-shopping-cart"></span>
+          <span>購物車</span>
+          <span>
+            <span>(</span>
+            <span id="change-quantity">0</span>
+            <span>)</span>
+          </span>
+      </a>
+    </div>
+
+    <!--scroll down menu start-->
+    <div id="navbar_div">
+
+        <a href="https://aoaodelivery.com/" id="scrolllink"><img src="../image/icon.png">
+        </a>
+        <ul>
+      <li link-highlight="/">
+        <a link-highlight="/" href="https://aoaodelivery.com/" target="" ng-non-bindable="">首頁</a>
+      </li>
+    <!-- Has dropdown links -->
+      <!-- doesn't have dropdown links -->
+      <li link-highlight="catering_set">
+        <a link-highlight="catering_set" href="../categories/catering_set.html" target="" ng-non-bindable="">多人到會套餐</a>
+      </li>
+    <!-- Has dropdown links -->
+      <li class="nav-dropdown" link-highlight="alacarte">
+        <a class="nav-dropdown-toggle" id="herepress" link-highlight="alacarte" href="../categories/alacarte.html" target="" ng-non-bindable="">單點到會美食 <span class="caret" id="dropp"></span></a>
+        <ul class="nav-dropdown-menu" id="herecome">
+              <li link-highlight="">
+                <a link-highlight="" href="../categories/salad.html" target="" ng-non-bindable="">沙律&nbsp/&nbsp小食</a>
+              </li>
+            <li link-highlight="">
+              <a link-highlight="" href="../categories/meat.html" target="" ng-non-bindable="">肉類</a>
+            </li>
+            <li link-highlight="">
+              <a link-highlight="" href="../categories/seafood.html" target="" ng-non-bindable="">海鮮</a>
+            </li>
+            <li link-highlight="">
+              <a link-highlight="" href="../categories/pastas.html" target="" ng-non-bindable="">意粉</a>
+            </li>
+            <li link-highlight="">
+              <a link-highlight="" href="../categories/risotto.html" target="" ng-non-bindable="">意大利飯</a>
+            </li>
+            <li link-highlight="">
+              <a link-highlight="" href="../categories/dessert.html" target="" ng-non-bindable="">甜品</a>
+            </li>
+            <li link-highlight="">
+              <a link-highlight="" href="../categories/drinks.html" target="" ng-non-bindable="">飲品</a>
+            </li>
+            <li link-highlight="">
+              <a link-highlight="" href="../categories/tableware.html" target="" ng-non-bindable="">額外餐具</a>
+            </li>
+        </ul>
+      </li>
+      <li >
+        <a  href="delivery.html" target="" ng-non-bindable="">運送服務方式</a>
+      </li>
+      <li l>
+        <a  href="payment.html" target="" ng-non-bindable="">付款服務方式</a>
+      </li>
+      <li >
+        <a  href="QnA.html" target="" ng-non-bindable="">常見問題</a>
+      </li>
+      </ul>
+    </div>
+    <!--scroll down menu end-->
+    <!--mobile menu start-->
+
+
+
+
+    <div id="mySidenav" class="sidenav">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      <li link-highlight="/">
+        <a link-highlight="/" href="https://aoaodelivery.com/" target="" ng-non-bindable="">首頁</a>
+      </li>
+    <!-- Has dropdown links -->
+      <!-- doesn't have dropdown links -->
+      <li link-highlight="catering_set">
+        <a link-highlight="catering_set" href="../categories/catering_set.html" target="" ng-non-bindable="">多人到會套餐</a>
+      </li>
+    <!-- Has dropdown links -->
+      <li class="nav-dropdown" link-highlight="alacarte">
+        <a class="nav-dropdown-toggle" link-highlight="alacarte" href="../categories/alacarte.html" target="" ng-non-bindable="">單點到會美食 <span class="caret"></span></a>
+        <ul class="nav-dropdown-menu">
+
+                <li link-highlight="">
+                  <a link-highlight="" href="../categories/salad.html" target="" ng-non-bindable="">沙律&nbsp/&nbsp小食</a>
+                </li>
+            <li link-highlight="">
+              <a link-highlight="" href="../categories/meat.html" target="" ng-non-bindable="">肉類</a>
+            </li>
+            <li link-highlight="">
+              <a link-highlight="" href="../categories/seafood.html" target="" ng-non-bindable="">海鮮</a>
+            </li>
+            <li link-highlight="">
+              <a link-highlight="" href="../categories/pastas.html" target="" ng-non-bindable="">意粉</a>
+            </li>
+            <li link-highlight="">
+              <a link-highlight="" href="../categories/risotto.html" target="" ng-non-bindable="">意大利飯</a>
+            </li>
+            <li link-highlight="">
+              <a link-highlight="" href="../categories/dessert.html" target="" ng-non-bindable="">甜品</a>
+            </li>
+            <li link-highlight="">
+              <a link-highlight="" href="../categories/drinks.html" target="" ng-non-bindable="">飲品</a>
+            </li>
+            <li link-highlight="">
+              <a link-highlight="" href="../categories/tableware.html" target="" ng-non-bindable="">額外餐具</a>
+            </li>
+        </ul>
+      </li>
+      <li >
+        <a  href="delivery.html" target="" ng-non-bindable="">運送服務方式</a>
+      </li>
+      <li l>
+        <a  href="payment.html" target="" ng-non-bindable="">付款服務方式</a>
+      </li>
+      <li >
+        <a  href="QnA.html" target="" ng-non-bindable="">常見問題</a>
+      </li>
+      </ul>
+    </div>
+    <!--mobile menu end-->
+
+
+    <!--popup window css start-->
+    <style>
+    .Cart-shadow{
+      width: 100%;
+      height: 100%;
+      background: grey;
+      z-index: 8;
+      position: absolute;
+      opacity: 0.7;
+      display:none;
+    }
+    .Cart-Container{
+      width: 70%;
+      height: 80vh;
+      background-color: #BF6B59;
+      border-radius: 20px;
+      box-shadow: 0px 25px 40px #1687d933;
+      left: 15%;
+      top: 2.5%;
+      position: absolute;
+      z-index: 10;
+      display: none;
+    }
+    .scart-header{
+      margin: auto;
+      width: 90%;
+      height: 15%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .scart-heading{
+      font-size: 20px;
+      font-family: ‘Open Sans’;
+      font-weight: 700;
+      color: #2F3841;
+    }
+    .scart-remove{
+      font-size: 14px;
+      font-family: ‘Open Sans’;
+      font-weight: 600;
+      color: #FFF9E3;
+      cursor: pointer;
+      border-bottom: 1px solid #FFFFFF;
+    }
+    .scart-items{
+      width: 100%;
+      margin: auto;
+    }
+    .scart-image{
+      float: left;
+      width: 15%;
+      text-align: right;
+      height:100px;
+    }
+    .scart-image>img{
+      width: 100px;
+      height: 100px;
+      margin-right: 10px;
+    }
+    .scart-items-about{
+      float: right;
+      width: 85%;
+      height: 100px;
+    }
+    .scart-items-title{
+      font-size: 24px;
+      font-weight: bold;
+
+    }
+    .scart-remove-item{
+      text-align: left;
+    }
+    /*change css of delete links*/
+    #scart-remove-item-link-smallset{
+      font-weight: lighter;
+      text-decoration: none;
+      color: #E7DECC;
+      cursor: pointer;
+    }
+    .scart-items-wrapper{
+      position:absolute;
+      width:100%;
+    }
+    </style>
+    <!--popup window css end-->
+
+
+
+    <!--popup window script start-->
+    <script type="text/javascript">
+      function closeCart(){
+        if (Shop_Cart_Open){
+          document.getElementById('Cart-Container-id').style.display= "none";
+          document.getElementById('Cart-shadow-id').style.display= "none";
+          Shop_Cart_Open=false;
+        }
+      }
+
+    </script>
+
+    <!--popup window script end-->
+
+
+    <!--shop cart pop-up start-->
+
+
+    <div class="Cart-shadow" id="Cart-shadow-id" onclick="closeCart()" ></div>
+    <div class="Cart-Container" id="Cart-Container-id" >
+      <div class="scart-header">
+        <h3 class="scart-heading">購物車</h3>
+        <h5 class="scart-remove" onclick="clearAllItems()">清除所有</h5>
+      </div>
+
+
+
+      <!--variate part-->
+      <div class="scart-items-wrapper" id="scart-item-wrap">
+      </div>
+
+
+
+
+      <div class="scart-checkout-wrapper" style="position:absolute;width:100%; bottom:2%;">
+        <hr style="width: 66%;float: right;margin-right: 5%;">
+        <div class=”scart-checkout” style="float:right;width:38%;margin-right:5%;">
+          <div class=”scart-total” style="width: 100%; display: flex; justify-content: space-between;">
+            <div>
+              <div class=”scart-subtotal” style="font-size: 22px; font-family: ‘Open Sans’; font-weight: 700; color: #202020;">總數</div>
+              <div class=”scart-items-total” style="font-size: 16px; font-family: ‘Open Sans’; font-weight: 500; color: #F0F0F0; line-height: 10px;">件數: <span class="scart-items-quantity" id="quantity-for-items"></span></div>
+            </div>
+            <div class=”scart-total-price” id="price-for-scart"style="font-size: 36px;font-family: ‘Open Sans’;font-weight: 900;color: #202020;"></div>
+          </div>
+          <button class=”scart-button” style="margin-top: 5px;width: 100%;height: 40px;border: none;background: linear-gradient(to bottom right, #B8D7FF, #8EB7EB);border-radius: 20px;cursor: pointer;font-size: 16px;font-family: ‘Open Sans’;font-weight: 600;color: #202020;" onclick="checkoutConfirm()">訂單結帳</button>
+        </div>
+      </div>
+
+    </div>
+    <nav class="nav-bar" id="nav_nav_wrap">
+
+    <div class="navbar-wrapper" >
+      <div class="navbar hidden-xs" role="navigation">
+        <div class="navbar-header-wrapper">
+          <div class="container">
+            <div class="navbar-header">
+              <a href="https://aoaodelivery.com/">
+                <img src="../image/icon.png" class="logo-image sl-lazy-image" data-resizing-segment="140" data-size="x280">
+              </a>
+            </div>
+          </div> <!--container-->
+        </div>
+        <div class="navbar-menu-wrapper">
+          <div class="container">
+            <div class="navbar-menu hidden-xs">
+              <ul class="text-primary-color">
+    <!-- Has dropdown links -->
+      <!-- doesn't have dropdown links -->
+      <li link-highlight="/">
+        <a link-highlight="/" href="https://aoaodelivery.com/" target="" ng-non-bindable="">首頁</a>
+      </li>
+    <!-- Has dropdown links -->
+      <!-- doesn't have dropdown links -->
+      <li link-highlight="catering_set">
+        <a link-highlight="catering_set" href="../categories/catering_set.html" target="" ng-non-bindable="">多人到會套餐</a>
+      </li>
+    <!-- Has dropdown links -->
+      <li class="nav-dropdown" link-highlight="alacarte">
+        <a class="nav-dropdown-toggle" link-highlight="alacarte" href="../categories/alacarte.html" target="" ng-non-bindable="">單點到會美食 <span class="caret"></span></a>
+        <ul class="nav-dropdown-menu">
+
+                <li link-highlight="">
+                  <a link-highlight="" href="../categories/salad.html" target="" ng-non-bindable="">沙律&nbsp/&nbsp小食</a>
+                </li>
+            <li link-highlight="">
+              <a link-highlight="" href="../categories/meat.html" target="" ng-non-bindable="">肉類</a>
+            </li>
+            <li link-highlight="">
+              <a link-highlight="" href="../categories/seafood.html" target="" ng-non-bindable="">海鮮</a>
+            </li>
+            <li link-highlight="">
+              <a link-highlight="" href="../categories/pastas.html" target="" ng-non-bindable="">意粉</a>
+            </li>
+            <li link-highlight="">
+              <a link-highlight="" href="../categories/risotto.html" target="" ng-non-bindable="">意大利飯</a>
+            </li>
+            <li link-highlight="">
+              <a link-highlight="" href="../categories/dessert.html" target="" ng-non-bindable="">甜品</a>
+            </li>
+            <li link-highlight="">
+              <a link-highlight="" href="../categories/drinks.html" target="" ng-non-bindable="">飲品</a>
+            </li>
+            <li link-highlight="">
+              <a link-highlight="" href="../categories/tableware.html" target="" ng-non-bindable="">額外餐具</a>
+            </li>
+        </ul>
+      </li>
+      <li >
+        <a  href="delivery.html" target="" ng-non-bindable="">運送服務方式</a>
+      </li>
+      <li >
+        <a  href="payment.html" target="" ng-non-bindable="">付款服務方式</a>
+      </li>
+      <li >
+        <a  href="QnA.html" target="" ng-non-bindable="">常見問題</a>
+      </li>
+    </ul>
+            </div>
+          </div> <!--container-->
+        </div>
+      </div><!--navbar-->
+    </div><!--navbar-wrapper-->
+</nav>
+
+<!--main body start-->
+<div class="body-content-wrapper" id="body-content">
+  <div class="container content-controller ng-isolate-scope" ga-page-view="">
+    <div class="page-style global-secondary" ng-non-bindable="">
+      <h1 class="text-center custom-page-title">
+        運送服務方式
+      </h1>
+        <span id="docs-internal-guid-4d5b6ac8-7fff-e0dd-edd9-de7547ddbfd6" style="font-size: medium;"><p dir="ltr" style="line-height: 1.08; margin-top: 0pt; margin-bottom: 0pt; padding: 0pt 0pt 8pt;"><span style="font-family: &quot;Microsoft JhengHei&quot;; background-color: transparent; font-variant-numeric: normal; font-variant-east-asian: normal; text-decoration-line: underline; vertical-align: baseline; white-space: pre-wrap; font-weight: bold;">送貨服務</span></p><p dir="ltr" style="line-height: 1.08; margin-top: 0pt; margin-bottom: 0pt; padding: 0pt 0pt 8pt;"><span style="color: rgb(0, 0, 0);"><span style="background-color: transparent; font-family: &quot;Microsoft JhengHei&quot;; font-variant-numeric: normal; font-variant-east-asian: normal; vertical-align: baseline; white-space: pre-wrap;">到會餐點：</span></span></p><ul><li><span style="color: rgb(0, 0, 0);">購物滿 $1,000九龍區免運費</span>；</li></ul><ul><li><span style="background-color: transparent; font-family: &quot;Microsoft JhengHei&quot;; white-space: pre-wrap; color: rgb(0, 0, 0);">購物滿 $1,500新界及港島區免運費</span>。</li></ul><span style="color: rgb(0, 0, 0); font-size: medium;"><span style="background-color: transparent; font-family: &quot;Microsoft JhengHei&quot;; font-variant-numeric: normal; font-variant-east-asian: normal; vertical-align: baseline; white-space: pre-wrap;">如客人未達至免運費價錢，我們仍會代客人叫車送貨</span></span><span style="color: rgb(0, 0, 0); font-family: &quot;Microsoft JhengHei&quot;; font-size: medium; white-space: pre-wrap;">，</span><span style="color: rgb(0, 0, 0); font-size: medium;"><span style="background-color: transparent; font-family: &quot;Microsoft JhengHei&quot;; font-variant-numeric: normal; font-variant-east-asian: normal; vertical-align: baseline; white-space: pre-wrap;">運費自行到付。</span><span style="font-family: &quot;Microsoft JhengHei&quot;; white-space: pre-wrap;">交收時收貨司機不會進入大堂</span>或上門</span><span style="color: rgb(0, 0, 0); font-family: &quot;Microsoft JhengHei&quot;; font-size: medium; white-space: pre-wrap;">，</span><span style="color: rgb(0, 0, 0); font-family: &quot;Microsoft JhengHei&quot;; font-size: medium; white-space: pre-wrap;">交收地點會在車輛可停泊位置</span><span style="color: rgb(0, 0, 0); font-family: &quot;Microsoft JhengHei&quot;; font-size: medium; white-space: pre-wrap;">，</span><span style="color: rgb(0, 0, 0); font-family: &quot;Microsoft JhengHei&quot;; font-size: medium; white-space: pre-wrap;">司機將接近收貨地點時會聯絡</span><span id="docs-internal-guid-e5fccfe1-7fff-e719-1faf-4c4e85495a86"><span style="font-size: 12pt; font-family: &quot;Microsoft JhengHei&quot;; color: rgb(47, 47, 47); background-color: transparent; font-variant-numeric: normal; font-variant-east-asian: normal; vertical-align: baseline; white-space: pre-wrap;">顧客</span></span><span style="color: rgb(0, 0, 0); font-family: &quot;Microsoft JhengHei&quot;; font-size: medium; white-space: pre-wrap;">，</span><span id="docs-internal-guid-e5fccfe1-7fff-e719-1faf-4c4e85495a86"><span style="font-size: 12pt; font-family: &quot;Microsoft JhengHei&quot;; color: rgb(47, 47, 47); background-color: transparent; font-variant-numeric: normal; font-variant-east-asian: normal; vertical-align: baseline; white-space: pre-wrap;">顧客需到地面取餐</span></span><span style="color: rgb(0, 0, 0); font-family: &quot;Microsoft JhengHei&quot;; font-size: medium; white-space: pre-wrap;">。</span><div><span style="color: rgb(0, 0, 0); font-size: medium;"><span style="background-color: transparent; font-family: &quot;Microsoft JhengHei&quot;; white-space: pre-wrap;">若送貨司機在送貨時間內多次未能聯絡閣下</span></span><span style="color: rgb(0, 0, 0); font-family: &quot;Microsoft JhengHei&quot;; font-size: medium; white-space: pre-wrap;">，</span><span style="color: rgb(0, 0, 0); font-size: medium;"><span style="background-color: transparent; font-family: &quot;Microsoft JhengHei&quot;; white-space: pre-wrap;">或在到達時間後15分鐘內仍無法聯絡閣下進行交收</span></span><span style="color: rgb(0, 0, 0); font-family: &quot;Microsoft JhengHei&quot;; font-size: medium; white-space: pre-wrap;">，</span><span style="color: rgb(0, 0, 0); font-size: medium;"><span style="background-color: transparent; font-family: &quot;Microsoft JhengHei&quot;; white-space: pre-wrap;">送貨</span></span><span style="background-color: transparent; font-family: &quot;Microsoft JhengHei&quot;; white-space: pre-wrap; color: rgb(0, 0, 0); font-size: medium;">司機會</span><span style="color: rgb(0, 0, 0); font-family: &quot;Microsoft JhengHei&quot;; font-size: medium; white-space: pre-wrap;">：</span></div><div><ul><li><span style="color: rgb(0, 0, 0); font-size: medium;">將食物寄存在大堂或管理處(如有)</span>；</li></ul><ul><li><span style="color: rgb(0, 0, 0); font-size: medium;">將食物送回餐廳</span>，<span style="color: rgb(0, 0, 0); font-size: medium;">餐廳將會向閣下追討運費及撤銷訂單</span><span style="color: rgb(0, 0, 0);">，<span style="font-size: medium;">訂單費用不會退還</span></span>。</li></ul><div><span style="color: rgb(0, 0, 0); font-size: medium; background-color: transparent; font-family: &quot;Microsoft JhengHei&quot;; white-space: pre-wrap;">如客人需要送貨上門服務或需付額外附加費</span><span style="color: rgb(0, 0, 0); font-family: &quot;Microsoft JhengHei&quot;; font-size: medium; white-space: pre-wrap;">，</span><span style="color: rgb(0, 0, 0); font-size: medium; background-color: transparent; font-family: &quot;Microsoft JhengHei&quot;; white-space: pre-wrap;">有關詳情請聯絡客服</span><span style="color: rgb(0, 0, 0); font-size: medium;">。</span><br></div><div><span style="color: rgb(0, 0, 0); font-size: medium;">*離島及禁區不設送貨</span><span style="color: rgb(0, 0, 0); font-family: &quot;Microsoft JhengHei&quot;; font-size: medium; white-space: pre-wrap;">，</span><span style="color: rgb(0, 0, 0); font-family: &quot;Microsoft JhengHei&quot;; font-size: medium; white-space: pre-wrap;">敬請原諒</span><span style="color: rgb(0, 0, 0); font-family: &quot;Microsoft JhengHei&quot;; font-size: medium; white-space: pre-wrap;">。</span></div><p dir="ltr" style="line-height: 1.08; margin-top: 0pt; margin-bottom: 0pt; padding: 0pt 0pt 8pt;"><span style="color: rgb(0, 0, 0); font-size: medium;"><span style="font-family: &quot;Microsoft JhengHei&quot;; white-space: pre-wrap;"><br></span><span style="background-color: transparent; font-family: &quot;Microsoft JhengHei&quot;; white-space: pre-wrap;">本店不會在八號或以上颱風訊號或黑色暴</span></span><span style="background-color: transparent; font-family: &quot;Microsoft JhengHei&quot;; white-space: pre-wrap; color: rgb(0, 0, 0); font-size: medium;">雨訊號懸掛期間送貨</span><span style="color: rgb(0, 0, 0); font-family: &quot;Microsoft JhengHei&quot;; font-size: medium; white-space: pre-wrap;">。</span></p><ul><li><span id="docs-internal-guid-4d5b6ac8-7fff-e0dd-edd9-de7547ddbfd6" style="color: rgb(0, 0, 0); font-size: medium;"><span style="background-color: transparent; font-family: &quot;Microsoft JhengHei&quot;; font-variant-numeric: normal; font-variant-east-asian: normal; vertical-align: baseline; white-space: pre-wrap;">如遇黑色暴雨訊號懸掛</span>，<span style="background-color: transparent; font-family: &quot;Microsoft JhengHei&quot;; font-variant-numeric: normal; font-variant-east-asian: normal; vertical-align: baseline; white-space: pre-wrap;">訂單會順延至改發紅色暴雨或以下訊號後運送，每日最後之運送時間為晚上九時</span></span>；</li></ul><ul><li><span id="docs-internal-guid-4d5b6ac8-7fff-e0dd-edd9-de7547ddbfd6" style="color: rgb(0, 0, 0); font-size: medium;"><span style="background-color: transparent; font-family: &quot;Microsoft JhengHei&quot;; font-variant-numeric: normal; font-variant-east-asian: normal; vertical-align: baseline; white-space: pre-wrap;">如因八號或以上颱風訊號影響導致食物未能於當日送達</span>，<span style="background-color: transparent; font-family: &quot;Microsoft JhengHei&quot;; font-variant-numeric: normal; font-variant-east-asian: normal; vertical-align: baseline; white-space: pre-wrap;">我們最快會在下一個工作天內向你</span><span style="background-color: transparent; font-family: &quot;Microsoft JhengHei&quot;; font-variant-numeric: normal; font-variant-east-asian: normal; vertical-align: baseline; white-space: pre-wrap;">聯絡</span>，<span style="background-color: transparent; font-family: &quot;Microsoft JhengHei&quot;; font-variant-numeric: normal; font-variant-east-asian: normal; vertical-align: baseline; white-space: pre-wrap;">商討下次送貨事宜</span></span>；</li></ul><ul><li><span id="docs-internal-guid-4d5b6ac8-7fff-e0dd-edd9-de7547ddbfd6"><span style="background-color: transparent; white-space: pre-wrap; font-family: &quot;Microsoft JhengHei&quot;; color: rgb(0, 0, 0); font-size: medium;">顧客可延期一次訂單運送服務，並須於延期當日起計六十日內完成取貨，所付之款項將不作退還，否則當作自動放棄論</span></span>。</li></ul></div>
+    </div>
+  </div>
+
+</div>
+<!--main body end-->
+
+
+
+<!--footer start-->
+
+
+
+<table  class="foot">
+    <tr class="one_row">
+      <td class="foot-lef-col">
+          <h4><span style="font-size:24px;">顧客服務</span></h4>
+          <p><a href="../pages/QnA.html" target="_self"><span>常見問題</span></a></p>
+          <p>​<a href="../pages/delivery.html" target="_self"><span>運送服務方式</span></a></p>
+          <p><a href="../pages/payment.html" target="_self"><span>付款服務方式</span></a></p>
+        </td>
+        <td class="foot-right-col">
+          <h4><span style="font-size:24px;">聯絡我們</span></h4>
+              <ul class="list-unstyled">
+                <li>電話:9887 7619(可whatsapp）</li>
+                <li>時間:12:00-22:00</li>
+                <li>電郵:info@aoaodelivery.com</li>
+              </ul>
+        </td>
+    </tr>
+  </table>
+  <br>
+  <table class="foot">
+    <tr class="warning-container">
+      <td class="warning-wrapper">
+          <p>* 圖片只供參考 *</p>
+          <p>* 未經許可，網站上的圖片及文章不得轉載或引用 *</p>
+          <p>即日外賣急單專線: 9887 7819 (可WhatsApp聯絡)</p>
+          <p>電郵: info@aoaodelivery.com</p>
+        </td>
+    </tr>
+    <tr>  <td class="image-footer">
+            <img alt="HKICL | 轉數快" src="https://www.hkma.gov.hk/media/chi/img/smart-consumers/fps_c.png">
+            <img alt="PAYME " src="https://static.wixstatic.com/media/576ba0_ab6e102b8afe49d59460133760e44e17~mv2.png/v1/fill/w_520,h_520,al_c,q_85,usm_0.66_1.00_0.01/logo_payme_en.webp">
+          </td>
+    </tr>
+    <tr>
+      <td>
+      <p class="text-center"><a href="../pages/aboutus.html" style="background-color: rgb(255, 255, 255); font-size: 16px;" target="_self"><span>關於我們</span></a> | <a href="../pages/terms.html" target="_self"><span>條款及細則 </span></a>| 2022 © AOAODELIVERY</p>
+    </td>
+    </tr>
+
+</table>
+<!--footer end-->
+
+  </body>
+</html>

@@ -1,0 +1,1005 @@
+<html>
+  <head>
+
+    	<meta charset="utf-8">
+      <link rel="stylesheet" media="all" href="https://cdn.shoplineapp.com/assets/common-f47625baea59b7f28766c213f44af5679a3f7198f77cf8bb89041274db97940a.css">
+      <link rel="stylesheet" media="all" href="https://cdn.shoplineapp.com/assets/application-6f3b55f8b8d864ba63c7dfe842d4d69459c535d0e99fe9d00ab5fa8c5dffe250.css">
+      <link rel="stylesheet" media="all" href="https://cdn.shoplineapp.com/assets/themes/slate-b6f9c73311a1041d6bd6386ce8911939cad346fdc954b1c089f947227c81ae99.css">
+      <!--ICON-->
+      <link rel="icon" type="image/png" href="https://aoaodelivery/image/icon.jpg">
+      <script src="../shopping_cart.js"></script>
+      <link rel="stylesheet" type="text/css" href="../footer.css">
+
+      <title>條款與細則</title>
+
+
+      <meta name="description" content="條款與細則">
+
+
+
+      <style media="screen">
+      .fixed-menu-wrapper{
+        position: relative;
+        margin-top: 0.5%;
+        z-index: 3;
+      }
+      .cart-btn{
+        right: 3px;
+        font-size: 13px;
+        border-radius: 3px;
+        border: 1px solid #aaa;
+        padding: 5px 8px;
+        font-weight: 700;
+        position: fixed;
+      }
+      .media-btn{
+        margin-left: 0.1%;
+        margin-right: 0.1%;
+        z-index:5;
+      }
+      .media-wrapper{
+        margin-left: 10%;
+        width: 10%;
+        position: fixed;
+      }
+      </style>
+  </head>
+  <body onload="genCart()">
+
+
+    <div class="fixed-menu-wrapper">
+      <span class="media-wrapper">
+        <a class="media-btn" href="https://www.facebook.com/wishao.hk/"><i class="fa fa-facebook-square"></i></a>
+        <a class="media-btn" href="https://www.instagram.com/aoao.delivery/"><i class="fa fa-instagram"></i></a>
+        <a class="media-btn" href="https://www.instagram.com/aoao.delivery/"><i class="fa fa-envelope"></i></a>
+      </span>
+
+
+      <a class="cart-btn" onclick="OpenCart()">
+          <span class="fa fa-shopping-cart"></span>
+          <span>購物車</span>
+          <span>
+            <span>(</span>
+            <span id="change-quantity">0</span>
+            <span>)</span>
+          </span>
+      </a>
+    </div>
+
+
+    <div class="fixed-menu-wrapper" id="fixed-menu">
+      <div class="mobile_btn_container" id="mobile_menu_btn" onclick="myFunction(this)">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+      </div>
+      <span class="media-wrapper">
+        <a class="media-btn" href="https://www.facebook.com/wishao.hk/"><i class="fa fa-facebook-square"></i></a>
+        <a class="media-btn" href="https://www.instagram.com/aoao.delivery/"><i class="fa fa-instagram"></i></a>
+        <a class="media-btn" href="https://www.instagram.com/aoao.delivery/"><i class="fa fa-envelope"></i></a>
+      </span>
+
+      <img src="../image/icon.png" id="img_mobile">
+
+      <a class="cart-btn" onclick="OpenCart()">
+          <span class="fa fa-shopping-cart"></span>
+          <span>購物車</span>
+          <span>
+            <span>(</span>
+            <span id="change-quantity">0</span>
+            <span>)</span>
+          </span>
+      </a>
+    </div>
+
+    <!--scroll down menu start-->
+    <div id="navbar_div">
+
+        <a href="https://aoaodelivery.com/" id="scrolllink"><img src="../image/icon.png">
+        </a>
+        <ul>
+      <li link-highlight="/">
+        <a link-highlight="/" href="https://aoaodelivery.com/" target="" ng-non-bindable="">首頁</a>
+      </li>
+    <!-- Has dropdown links -->
+      <!-- doesn't have dropdown links -->
+      <li link-highlight="catering_set">
+        <a link-highlight="catering_set" href="../categories/catering_set.html" target="" ng-non-bindable="">多人到會套餐</a>
+      </li>
+    <!-- Has dropdown links -->
+      <li class="nav-dropdown" link-highlight="alacarte">
+        <a class="nav-dropdown-toggle" id="herepress" link-highlight="alacarte" href="../categories/alacarte.html" target="" ng-non-bindable="">單點到會美食 <span class="caret" id="dropp"></span></a>
+        <ul class="nav-dropdown-menu" id="herecome">
+              <li link-highlight="">
+                <a link-highlight="" href="../categories/salad.html" target="" ng-non-bindable="">沙律&nbsp/&nbsp小食</a>
+              </li>
+            <li link-highlight="">
+              <a link-highlight="" href="../categories/meat.html" target="" ng-non-bindable="">肉類</a>
+            </li>
+            <li link-highlight="">
+              <a link-highlight="" href="../categories/seafood.html" target="" ng-non-bindable="">海鮮</a>
+            </li>
+            <li link-highlight="">
+              <a link-highlight="" href="../categories/pastas.html" target="" ng-non-bindable="">意粉</a>
+            </li>
+            <li link-highlight="">
+              <a link-highlight="" href="../categories/risotto.html" target="" ng-non-bindable="">意大利飯</a>
+            </li>
+            <li link-highlight="">
+              <a link-highlight="" href="../categories/dessert.html" target="" ng-non-bindable="">甜品</a>
+            </li>
+            <li link-highlight="">
+              <a link-highlight="" href="../categories/drinks.html" target="" ng-non-bindable="">飲品</a>
+            </li>
+            <li link-highlight="">
+              <a link-highlight="" href="../categories/tableware.html" target="" ng-non-bindable="">額外餐具</a>
+            </li>
+        </ul>
+      </li>
+      <li >
+        <a  href="delivery.html" target="" ng-non-bindable="">運送服務方式</a>
+      </li>
+      <li l>
+        <a  href="payment.html" target="" ng-non-bindable="">付款服務方式</a>
+      </li>
+      <li >
+        <a  href="QnA.html" target="" ng-non-bindable="">常見問題</a>
+      </li>
+      </ul>
+    </div>
+    <!--scroll down menu end-->
+    <!--mobile menu start-->
+
+
+
+
+    <div id="mySidenav" class="sidenav">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      <li link-highlight="/">
+        <a link-highlight="/" href="https://aoaodelivery.com/" target="" ng-non-bindable="">首頁</a>
+      </li>
+    <!-- Has dropdown links -->
+      <!-- doesn't have dropdown links -->
+      <li link-highlight="catering_set">
+        <a link-highlight="catering_set" href="../categories/catering_set.html" target="" ng-non-bindable="">多人到會套餐</a>
+      </li>
+    <!-- Has dropdown links -->
+      <li class="nav-dropdown" link-highlight="alacarte">
+        <a class="nav-dropdown-toggle" link-highlight="alacarte" href="../categories/alacarte.html" target="" ng-non-bindable="">單點到會美食 <span class="caret"></span></a>
+        <ul class="nav-dropdown-menu">
+
+                <li link-highlight="">
+                  <a link-highlight="" href="../categories/salad.html" target="" ng-non-bindable="">沙律&nbsp/&nbsp小食</a>
+                </li>
+            <li link-highlight="">
+              <a link-highlight="" href="../categories/meat.html" target="" ng-non-bindable="">肉類</a>
+            </li>
+            <li link-highlight="">
+              <a link-highlight="" href="../categories/seafood.html" target="" ng-non-bindable="">海鮮</a>
+            </li>
+            <li link-highlight="">
+              <a link-highlight="" href="../categories/pastas.html" target="" ng-non-bindable="">意粉</a>
+            </li>
+            <li link-highlight="">
+              <a link-highlight="" href="../categories/risotto.html" target="" ng-non-bindable="">意大利飯</a>
+            </li>
+            <li link-highlight="">
+              <a link-highlight="" href="../categories/dessert.html" target="" ng-non-bindable="">甜品</a>
+            </li>
+            <li link-highlight="">
+              <a link-highlight="" href="../categories/drinks.html" target="" ng-non-bindable="">飲品</a>
+            </li>
+            <li link-highlight="">
+              <a link-highlight="" href="../categories/tableware.html" target="" ng-non-bindable="">額外餐具</a>
+            </li>
+        </ul>
+      </li>
+      <li >
+        <a  href="delivery.html" target="" ng-non-bindable="">運送服務方式</a>
+      </li>
+      <li l>
+        <a  href="payment.html" target="" ng-non-bindable="">付款服務方式</a>
+      </li>
+      <li >
+        <a  href="QnA.html" target="" ng-non-bindable="">常見問題</a>
+      </li>
+      </ul>
+    </div>
+    <!--mobile menu end-->
+
+    <!--popup window css start-->
+    <style>
+    .Cart-shadow{
+      width: 100%;
+      height: 100%;
+      background: grey;
+      z-index: 8;
+      position: absolute;
+      opacity: 0.7;
+      display:none;
+    }
+    .Cart-Container{
+      width: 70%;
+      height: 80vh;
+      background-color: #BF6B59;
+      border-radius: 20px;
+      box-shadow: 0px 25px 40px #1687d933;
+      left: 15%;
+      top: 2.5%;
+      position: absolute;
+      z-index: 10;
+      display: none;
+    }
+    .scart-header{
+      margin: auto;
+      width: 90%;
+      height: 15%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .scart-heading{
+      font-size: 20px;
+      font-family: ‘Open Sans’;
+      font-weight: 700;
+      color: #2F3841;
+    }
+    .scart-remove{
+      font-size: 14px;
+      font-family: ‘Open Sans’;
+      font-weight: 600;
+      color: #FFF9E3;
+      cursor: pointer;
+      border-bottom: 1px solid #FFFFFF;
+    }
+    .scart-items{
+      width: 100%;
+      margin: auto;
+    }
+    .scart-image{
+      float: left;
+      width: 15%;
+      text-align: right;
+      height:100px;
+    }
+    .scart-image>img{
+      width: 100px;
+      height: 100px;
+      margin-right: 10px;
+    }
+    .scart-items-about{
+      float: right;
+      width: 85%;
+      height: 100px;
+    }
+    .scart-items-title{
+      font-size: 24px;
+      font-weight: bold;
+
+    }
+    .scart-remove-item{
+      text-align: left;
+    }
+    /*change css of delete links*/
+    #scart-remove-item-link-smallset{
+      font-weight: lighter;
+      text-decoration: none;
+      color: #E7DECC;
+      cursor: pointer;
+    }
+    .scart-items-wrapper{
+      position:absolute;
+      width:100%;
+    }
+    </style>
+    <!--popup window css end-->
+
+
+
+    <!--popup window script start-->
+    <script type="text/javascript">
+      function closeCart(){
+        if (Shop_Cart_Open){
+          document.getElementById('Cart-Container-id').style.display= "none";
+          document.getElementById('Cart-shadow-id').style.display= "none";
+          Shop_Cart_Open=false;
+        }
+      }
+
+    </script>
+
+    <!--popup window script end-->
+
+
+    <!--shop cart pop-up start-->
+
+
+    <div class="Cart-shadow" id="Cart-shadow-id" onclick="closeCart()" ></div>
+    <div class="Cart-Container" id="Cart-Container-id" >
+      <div class="scart-header">
+        <h3 class="scart-heading">購物車</h3>
+        <h5 class="scart-remove" onclick="clearAllItems()">清除所有</h5>
+      </div>
+
+
+
+      <!--variate part-->
+      <div class="scart-items-wrapper" id="scart-item-wrap">
+      </div>
+
+
+
+
+      <div class="scart-checkout-wrapper" style="position:absolute;width:100%; bottom:2%;">
+        <hr style="width: 66%;float: right;margin-right: 5%;">
+        <div class=”scart-checkout” style="float:right;width:38%;margin-right:5%;">
+          <div class=”scart-total” style="width: 100%; display: flex; justify-content: space-between;">
+            <div>
+              <div class=”scart-subtotal” style="font-size: 22px; font-family: ‘Open Sans’; font-weight: 700; color: #202020;">總數</div>
+              <div class=”scart-items-total” style="font-size: 16px; font-family: ‘Open Sans’; font-weight: 500; color: #F0F0F0; line-height: 10px;">件數: <span class="scart-items-quantity" id="quantity-for-items"></span></div>
+            </div>
+            <div class=”scart-total-price” id="price-for-scart"style="font-size: 36px;font-family: ‘Open Sans’;font-weight: 900;color: #202020;"></div>
+          </div>
+          <button class=”scart-button” style="margin-top: 5px;width: 100%;height: 40px;border: none;background: linear-gradient(to bottom right, #B8D7FF, #8EB7EB);border-radius: 20px;cursor: pointer;font-size: 16px;font-family: ‘Open Sans’;font-weight: 600;color: #202020;" onclick="checkoutConfirm()">訂單結帳</button>
+        </div>
+      </div>
+
+    </div>
+
+    <nav class="nav-bar" id="nav_nav_wrap">
+
+    <div class="navbar-wrapper" >
+      <div class="navbar hidden-xs" role="navigation">
+        <div class="navbar-header-wrapper">
+          <div class="container">
+            <div class="navbar-header">
+              <a href="https://aoaodelivery.com/">
+                <img src="../image/icon.png" class="logo-image sl-lazy-image" data-resizing-segment="140" data-size="x280">
+              </a>
+            </div>
+          </div> <!--container-->
+        </div>
+        <div class="navbar-menu-wrapper">
+          <div class="container">
+            <div class="navbar-menu hidden-xs">
+              <ul class="text-primary-color">
+    <!-- Has dropdown links -->
+      <!-- doesn't have dropdown links -->
+      <li link-highlight="/">
+        <a link-highlight="/" href="https://aoaodelivery.com/" target="" ng-non-bindable="">首頁</a>
+      </li>
+    <!-- Has dropdown links -->
+      <!-- doesn't have dropdown links -->
+      <li link-highlight="catering_set">
+        <a link-highlight="catering_set" href="../categories/catering_set.html" target="" ng-non-bindable="">多人到會套餐</a>
+      </li>
+    <!-- Has dropdown links -->
+      <li class="nav-dropdown" link-highlight="alacarte">
+        <a class="nav-dropdown-toggle" link-highlight="alacarte" href="../categories/alacarte.html" target="" ng-non-bindable="">單點到會美食 <span class="caret"></span></a>
+        <ul class="nav-dropdown-menu">
+
+                <li link-highlight="">
+                  <a link-highlight="" href="../categories/salad.html" target="" ng-non-bindable="">沙律&nbsp/&nbsp小食</a>
+                </li>
+            <li link-highlight="">
+              <a link-highlight="" href="../categories/meat.html" target="" ng-non-bindable="">肉類</a>
+            </li>
+            <li link-highlight="">
+              <a link-highlight="" href="../categories/seafood.html" target="" ng-non-bindable="">海鮮</a>
+            </li>
+            <li link-highlight="">
+              <a link-highlight="" href="../categories/pastas.html" target="" ng-non-bindable="">意粉</a>
+            </li>
+            <li link-highlight="">
+              <a link-highlight="" href="../categories/risotto.html" target="" ng-non-bindable="">意大利飯</a>
+            </li>
+            <li link-highlight="">
+              <a link-highlight="" href="../categories/dessert.html" target="" ng-non-bindable="">甜品</a>
+            </li>
+            <li link-highlight="">
+              <a link-highlight="" href="../categories/drinks.html" target="" ng-non-bindable="">飲品</a>
+            </li>
+            <li link-highlight="">
+              <a link-highlight="" href="../categories/tableware.html" target="" ng-non-bindable="">額外餐具</a>
+            </li>
+        </ul>
+      </li>
+      <li >
+        <a  href="delivery.html" target="" ng-non-bindable="">運送服務方式</a>
+      </li>
+      <li>
+        <a  href="payment.html" target="" ng-non-bindable="">付款服務方式</a>
+      </li>
+      <li >
+        <a  href="QnA.html" target="" ng-non-bindable="">常見問題</a>
+      </li>
+    </ul>
+            </div>
+          </div> <!--container-->
+        </div>
+      </div><!--navbar-->
+    </div><!--navbar-wrapper-->
+  </nav>
+
+<!--main body start-->
+<div class="body-content-wrapper" id="body-content">
+  <div class="container content-controller ng-isolate-scope" ga-page-view="">
+    <div class="page-style global-secondary" ng-non-bindable="">
+      <h1 class="text-center custom-page-title">
+        條款與細則
+      </h1>
+        <span id="docs-internal-guid-8b856db8-7fff-d129-717e-d68e5efc56a1">
+          <p dir="ltr" style="font-size: medium; color: rgb(23, 22, 22); line-height: 1.08; margin-top: 0pt; margin-bottom: 0pt; padding: 0pt 0pt 8pt;">
+            <span style="font-variant-numeric: normal; font-variant-east-asian: normal; vertical-align: baseline;">
+              歡迎閣下使用EXPLORECATERVICESHK有限公司
+            </span>
+            <span style="text-size-adjust: 100%; font-variant-east-asian: normal; vertical-align: baseline;">（
+              下稱「EXPLORECATERVICESHK」或「本公司」）
+            </span>
+            <span style="text-size-adjust: 100%; font-variant-east-asian: normal; vertical-align: baseline;">
+              w
+            </span>
+            <span style="text-size-adjust: 100%; font-variant-east-asian: normal; vertical-align: baseline;">
+              ww.aoaodelivery.com/
+            </span>
+            <span style="text-size-adjust: 100%; font-variant-east-asian: normal; vertical-align: baseline;">
+              網站（下稱「本網
+            </span>
+            <span style="text-size-adjust: 100%; font-variant-east-asian: normal; vertical-align: baseline;">
+              站」）請仔細閱讀本網站的使用條款及細則
+            </span>
+            <span style="text-size-adjust: 100%; font-variant-east-asian: normal; vertical-align: baseline;">
+              （下稱「使用條款」）。鑒於閣下對本網站
+            </span>
+            <span style="text-size-adjust: 100%; font-variant-east-asian: normal; vertical-align: baseline;">
+              的使用意味著閣下已接受以下條款，故如閣
+            </span>
+            <span style="text-size-adjust: 100%; font-variant-east-asian: normal; vertical-align: baseline;">
+              下不想接受下列條款的約束，請勿使用本網
+            </span>
+            <span style="text-size-adjust: 100%; font-variant-east-asian: normal; vertical-align: baseline;">
+              站
+            </span>
+            。
+          </p>
+          <p dir="ltr" style="font-size: medium; color: rgb(23, 22, 22); line-height: 1.08; margin-top: 0pt; margin-bottom: 8pt;">
+            <span style="font-variant-numeric: normal; font-variant-east-asian: normal; vertical-align: baseline;">
+              我們可以隨時在我們的網站上修改及更新以
+            </span>
+            <span style="text-size-adjust: 100%; font-variant-east-asian: normal; vertical-align: baseline;">
+              下條款及細則，
+            </span>
+            <span style="text-size-adjust: 100%; font-variant-east-asian: normal; vertical-align: baseline;">
+              你應在每次使用我們的網站時
+            </span>
+            <span style="text-size-adjust: 100%;">
+              都查閱這些條款及細則。繼續使用我們的網
+            </span>
+            <span style="text-size-adjust: 100%; font-variant-east-asian: normal; vertical-align: baseline;">
+              站即表示你同意受修訂後的條款及細則約束
+            </span>
+            。
+          </p>
+          <p dir="ltr" style="font-size: medium; color: rgb(23, 22, 22); line-height: 1.08; margin-top: 0pt; margin-bottom: 8pt;">
+            <span style="font-variant-numeric: normal; font-variant-east-asian: normal; vertical-align: baseline;">
+              訂購
+            </span>
+            <span style="font-variant-numeric: normal; font-variant-east-asian: normal; vertical-align: baseline;">
+              細則
+            </span>
+          </p>
+          <ul style="font-size: medium; color: rgb(23, 22, 22); margin-top: 0px; margin-bottom: 0px;">
+            <li dir="ltr" style="list-style-type: disc; font-variant-numeric: normal; font-variant-east-asian: normal; vertical-align: baseline;">
+              <p dir="ltr" style="line-height:1.08;margin-top:0pt;margin-bottom:0pt;">
+                <span style="font-variant-numeric: normal; font-variant-east-asian: normal; vertical-align: baseline;">
+                  我們只接受網上訂購。請直接在
+                </span>
+                <span style="font-variant-numeric: normal; font-variant-east-asian: normal; vertical-align: baseline;">
+                  aoaodelivery.com/
+                </span>
+                <span style="font-variant-numeric: normal; font-variant-east-asian: normal; vertical-align: baseline;">
+                  下訂單，
+                </span>
+                <span style="font-variant-numeric: normal; font-variant-east-asian: normal; vertical-align: baseline;">
+                  截單時間為取貨
+                </span>
+                <span style="font-variant-numeric: normal; font-variant-east-asian: normal; vertical-align: baseline;">
+                  或
+                </span>
+                <span style="font-variant-numeric: normal; font-variant-east-asian: normal; vertical-align: baseline;">
+                  送貨前五個工作天
+                </span>
+                。
+              </p>
+            </li>
+            <li>
+              <span id="docs-internal-guid-8b856db8-7fff-d129-717e-d68e5efc56a1">
+                <p dir="ltr" style="line-height: 1.08; margin-top: 0pt; margin-bottom: 0pt; display: inline !important;">
+                  <span style="font-variant-numeric: normal; font-variant-east-asian: normal; vertical-align: baseline;">
+                    在全額付款後你的訂單才會被確認
+                  </span>
+                </p>
+              </span>
+              。
+            </li>
+            <li>
+              請在結賬時提供送貨或自取日期，
+              <span style="text-size-adjust: 100%; font-variant-east-asian: normal; vertical-align: baseline;">
+                時間和收貨人的聯絡資料，
+              </span>
+              <span style="text-size-adjust: 100%; font-variant-east-asian: normal; vertical-align: baseline;">
+                收貨人的聯絡資料必須完整無誤。如果收貨人的聯絡資料不正確或不完整而無法送貨，我們將
+              </span>
+              <span style="text-size-adjust: 100%; font-variant-east-asian: normal; vertical-align: baseline;">
+                撤銷訂單不會再作安排送貨，
+              </span>
+              <span style="text-size-adjust: 100%; font-variant-east-asian: normal; vertical-align: baseline;">
+                所收取之款項將不獲退還
+              </span>
+              。
+            </li>
+            <li dir="ltr" style="list-style-type: disc; font-variant-numeric: normal; font-variant-east-asian: normal; vertical-align: baseline;">
+              <p dir="ltr" style="line-height: 1.08; margin-top: 0pt; margin-bottom: 0pt;">
+                <span style="font-variant-numeric: normal; font-variant-east-asian: normal; vertical-align: baseline;">
+                  訂單一經接納後，恕不可取消，而所收取之款項將不獲退還
+                </span>
+                。
+                <span style="font-variant-numeric: normal; font-variant-east-asian: normal; vertical-align: baseline;">
+                  如需要加單
+                </span>
+                <span style="text-size-adjust: 100%; font-variant-east-asian: normal; vertical-align: baseline;">
+                  都需視乎我們存貨情況而定
+                </span>
+                <span style="text-size-adjust: 100%; font-variant-east-asian: normal; vertical-align: baseline;">
+                  ，
+                </span>
+                <span style="text-size-adjust: 100%; font-variant-east-asian: normal; vertical-align: baseline;">
+                  我們保留拒絕任何訂單加單的權利
+                </span>
+                。
+              </p>
+            </li>
+            <li dir="ltr" style="list-style-type: disc; font-variant-numeric: normal; font-variant-east-asian: normal; vertical-align: baseline;">
+              <p dir="ltr" style="line-height: 1.08; margin-top: 0pt; margin-bottom: 0pt;">
+                <span style="text-size-adjust: 100%;">
+                  急單
+                </span>
+                請先向我們客服聯絡，截單後未經我們同意
+                <span style="text-size-adjust: 100%;">
+                  之付款一律不會接納，
+                </span>
+                我們將
+                <span style="text-size-adjust: 100%; font-variant-east-asian: normal; vertical-align: baseline;">
+                  撤銷訂單
+                </span>
+                、
+                <span style="text-size-adjust: 100%;">
+                  退還
+                </span>
+                款項、
+                <span style="text-size-adjust: 100%;">
+                  及收取港幣$200作行政費用
+                </span>
+                。
+              </p>
+            </li>
+            <li dir="ltr" style="list-style-type: disc; font-variant-numeric: normal; font-variant-east-asian: normal; vertical-align: baseline;">
+              <p dir="ltr" style="line-height: 1.08; margin-top: 0pt; margin-bottom: 0pt;">
+                <span style="font-variant-numeric: normal; font-variant-east-asian: normal; vertical-align: baseline;">
+                  所有圖片只供參考
+                </span>
+                <span style="font-variant-numeric: normal; font-variant-east-asian: normal; vertical-align: baseline;">
+                  。
+                </span>
+                <span style="font-variant-numeric: normal; font-variant-east-asian: normal; vertical-align: baseline;">
+                  因個人電腦螢幕關係，商品顏色質感等可能有所誤差，請以實物為準
+                </span>
+                。
+              </p>
+            </li>
+          </ul>
+          <p dir="ltr" style="font-size: medium; color: rgb(23, 22, 22); line-height: 1.08; margin-top: 0pt; margin-bottom: 0pt;">
+            <span style="font-variant-numeric: normal; font-variant-east-asian: normal; vertical-align: baseline;">
+              運送細則
+            </span>
+          </p>
+          <ul style="font-size: medium; color: rgb(23, 22, 22); margin-top: 0px; margin-bottom: 0px;">
+            <li dir="ltr" style="list-style-type: disc; font-variant-east-asian: normal; vertical-align: baseline;">
+              <p dir="ltr" style="line-height: 1.08; margin-top: 0pt; margin-bottom: 0pt;">
+                <span style="font-variant-numeric: normal; font-variant-east-asian: normal; vertical-align: baseline;">
+                  不同地區凡訂購折實價指定金額可享有免運費服務
+                </span>
+                。
+                <span style="font-variant-numeric: normal; font-variant-east-asian: normal; vertical-align: baseline;">
+                  而低於指定
+                </span>
+                <span style="font-variant-numeric: normal; font-variant-east-asian: normal; vertical-align: baseline;">
+                  免運費金額，我們仍會代客人叫車送貨，但運
+                </span>
+              </p>
+              <p dir="ltr" style="line-height: 1.08; margin-top: 0pt; margin-bottom: 0pt;">
+                <span style="text-size-adjust: 100%; font-variant-east-asian: normal; vertical-align: baseline;">
+                  費需自行到付。(
+                </span>
+                <span style="text-size-adjust: 100%;">
+                  *離島及禁區不設送貨
+                </span>
+              </p>
+              <p dir="ltr" style="line-height: 1.08; margin-top: 0pt; margin-bottom: 0pt;">
+                <span style="text-size-adjust: 100%;">
+                  ，
+                </span>
+                <span style="text-size-adjust: 100%;">
+                  敬請原諒。
+                </span>
+                <span style="text-size-adjust: 100%; font-variant-numeric: normal; font-variant-east-asian: normal; vertical-align: baseline;">
+                  請參閱網站內運送服務方式
+                </span>
+                。
+                <span style="text-size-adjust: 100%; font-variant-numeric: normal; font-variant-east-asian: normal; vertical-align: baseline;">
+                  )
+                </span>
+                <br>
+              </p>
+            </li>
+            <li dir="ltr" style="list-style-type: disc; font-variant-numeric: normal; font-variant-east-asian: normal; vertical-align: baseline;">
+              <p dir="ltr" style="line-height: 1.08; margin-top: 0pt; margin-bottom: 0pt;">
+                <span style="font-variant-numeric: normal; font-variant-east-asian: normal; vertical-align: baseline;">
+                  送貨服務只限送至目的地之最近可以合法停車位置，
+                </span>
+                <span style="font-variant-numeric: normal; font-variant-east-asian: normal; vertical-align: baseline;">
+                  客人需自行到車輛位置提取
+                </span>
+                。
+              </p>
+            </li>
+            <li dir="ltr" style="list-style-type: disc; font-variant-numeric: normal; font-variant-east-asian: normal; vertical-align: baseline;">
+              <p dir="ltr" style="line-height: 1.08; margin-top: 0pt; margin-bottom: 0pt;">
+                <span style="font-variant-numeric: normal; font-variant-east-asian: normal; vertical-align: baseline;">
+                  如送貨地點需繳付入閘費或停車場費，有關費用將由顧客支付
+                </span>
+                。
+              </p>
+            </li>
+            <li dir="ltr" style="list-style-type: disc; font-variant-numeric: normal; font-variant-east-asian: normal; vertical-align: baseline;">
+              <p dir="ltr" style="line-height: 1.08; margin-top: 0pt; margin-bottom: 0pt;">
+                <span style="font-variant-numeric: normal; font-variant-east-asian: normal; vertical-align: baseline;">
+                  如有任何送貨要求或更改，你必須最
+                </span>
+                <span style="text-size-adjust: 100%; font-variant-east-asian: normal; vertical-align: baseline;">
+                  少在送貨前四十八小時內與我們聯絡及確認，而每張訂單只可更改一次送貨時間和地點
+                </span>
+                。
+              </p>
+            </li>
+            <li dir="ltr" style="list-style-type: disc; font-variant-numeric: normal; font-variant-east-asian: normal; vertical-align: baseline;">
+              <p dir="ltr" style="line-height: 1.08; margin-top: 0pt; margin-bottom: 0pt;">
+                <span style="font-variant-numeric: normal; font-variant-east-asian: normal; vertical-align: baseline;">
+                  本店不會在八號或以上颱風訊號或黑色暴雨訊號懸掛期間送貨
+                </span>
+                。
+              </p>
+            </li>
+          </ul>
+          <ol style="font-size: medium; color: rgb(23, 22, 22); margin-top: 0px; margin-bottom: 0px;">
+            <li dir="ltr" style="list-style-type: decimal; font-variant-numeric: normal; font-variant-east-asian: normal; vertical-align: baseline; margin-left: 36pt;">
+              <p dir="ltr" style="line-height: 1.08; margin-top: 0pt; margin-bottom: 0pt;">
+                <span style="font-variant-numeric: normal; font-variant-east-asian: normal; vertical-align: baseline;">
+                  &nbsp;如遇黑色暴雨訊號懸掛，
+                </span>
+                <span style="font-variant-numeric: normal; font-variant-east-asian: normal; vertical-align: baseline;">
+                  訂單會順延至改發紅色暴雨或以下訊號後運送，每日最後之運送時間為晚上九時
+                </span>
+                。
+              </p>
+            </li>
+            <li dir="ltr" style="list-style-type: decimal; font-variant-numeric: normal; font-variant-east-asian: normal; vertical-align: baseline; margin-left: 36pt;">
+              <p dir="ltr" style="line-height: 1.08; margin-top: 0pt; margin-bottom: 0pt;">
+                <span style="font-variant-numeric: normal; font-variant-east-asian: normal; vertical-align: baseline;">
+                  如因八號或以上颱風訊號影響導致食物未能於當日送達
+                </span>
+                ，
+                <span style="font-variant-numeric: normal; font-variant-east-asian: normal; vertical-align: baseline;">
+                  我們最快會在下一個工作天內向
+                </span>
+              </p>
+              <p dir="ltr" style="line-height: 1.08; margin-top: 0pt; margin-bottom: 0pt;">
+                <span style="text-size-adjust: 100%; font-variant-east-asian: normal; vertical-align: baseline;">
+                  你
+                </span>
+                <span style="text-size-adjust: 100%; font-variant-east-asian: normal; vertical-align: baseline;">
+                  聯絡，
+                </span>
+                <span style="text-size-adjust: 100%; font-variant-east-asian: normal; vertical-align: baseline;">
+                  商討下次送貨事宜
+                </span>
+                。
+                <br>
+              </p>
+            </li>
+            <li dir="ltr" style="list-style-type: decimal; font-variant-numeric: normal; font-variant-east-asian: normal; vertical-align: baseline; margin-left: 36pt;">
+              <p dir="ltr" style="line-height: 1.08; margin-top: 0pt; margin-bottom: 0pt;">
+                <span style="font-variant-numeric: normal; font-variant-east-asian: normal; vertical-align: baseline;">
+                  顧客可延期一次訂單運送服務，並須於延期當日起計六十日內完成取貨，所付之款項將
+                </span>
+              </p>
+              <p dir="ltr" style="line-height: 1.08; margin-top: 0pt; margin-bottom: 0pt;">
+                <span style="text-size-adjust: 100%; font-variant-east-asian: normal; vertical-align: baseline;">
+                  不作退還，否則當作自動放棄論
+                </span>
+                。
+                <br>
+              </p>
+            </li>
+          </ol>
+          <ul style="font-size: medium; color: rgb(23, 22, 22); margin-top: 0px; margin-bottom: 0px;">
+            <li dir="ltr" style="list-style-type: disc; font-variant-numeric: normal; font-variant-east-asian: normal; vertical-align: baseline;">
+              <p dir="ltr" style="line-height: 1.08; margin-top: 0pt; margin-bottom: 0pt;">
+                <span style="font-variant-numeric: normal; font-variant-east-asian: normal; vertical-align: baseline;">
+                  如遇上連續假期導致貨源供應短缺，本店將會與顧客聯絡商討更改食物種類事宜
+                </span>
+                。
+              </p>
+            </li>
+            <li dir="ltr" style="list-style-type: disc; font-variant-numeric: normal; font-variant-east-asian: normal; vertical-align: baseline;">
+              <p dir="ltr" style="line-height: 1.08; margin-top: 0pt; margin-bottom: 0pt;">
+                <span style="font-variant-numeric: normal; font-variant-east-asian: normal; vertical-align: baseline;">
+                  你亦可選擇到
+                </span>
+                <span style="font-variant-numeric: normal; font-variant-east-asian: normal; vertical-align: baseline;">
+                  門市自取，請提供訂單編號及電話號碼以作確認
+                </span>
+                <span style="font-variant-numeric: normal; font-variant-east-asian: normal; vertical-align: baseline;">
+                  。所有取貨
+                </span>
+              </p>
+              <p dir="ltr" style="line-height: 1.08; margin-top: 0pt; margin-bottom: 0pt;">
+                <span style="text-size-adjust: 100%; font-variant-east-asian: normal; vertical-align: baseline;">
+                  記錄以
+                </span>
+                <span style="text-size-adjust: 100%; font-variant-east-asian: normal; vertical-align: baseline;">
+                  aoaodelivery.com/
+                </span>
+                <span style="text-size-adjust: 100%; font-variant-east-asian: normal; vertical-align: baseline;">
+                  線上購物系統之記錄為準，不得異議
+                </span>
+                。
+                <br>
+              </p>
+            </li>
+            <li dir="ltr" style="list-style-type: disc; font-variant-numeric: normal; font-variant-east-asian: normal; vertical-align: baseline;">
+              <p dir="ltr" style="line-height: 1.08; margin-top: 0pt; margin-bottom: 0pt; padding: 3.75pt 0pt;">
+                <span style="font-variant-numeric: normal; font-variant-east-asian: normal; vertical-align: baseline;">
+                  若你未能於取貨通知內所列明之日期及時間內到指定分店取貨，將當作自
+                </span>
+                <span style="text-size-adjust: 100%; font-variant-east-asian: normal; vertical-align: baseline;">
+                  動放棄論，所繳付之款項將不獲退還
+                </span>
+                。
+              </p>
+            </li>
+          </ul>
+          <h2 dir="ltr" style="font-size: medium; line-height: 1.08; margin-top: 0pt; margin-bottom: 0pt; padding: 0pt 0pt 7.5pt;">
+            <span style="font-variant-numeric: normal; font-variant-east-asian: normal; vertical-align: baseline; color: rgb(20, 20, 20);">
+              付款細則
+            </span>
+          </h2>
+          <ul style="font-size: medium; color: rgb(23, 22, 22); margin-top: 0px; margin-bottom: 0px;">
+            <li dir="ltr" style="list-style-type: disc; font-variant-numeric: normal; font-variant-east-asian: normal; vertical-align: baseline;">
+              <p dir="ltr" style="line-height:1.38;margin-top:0pt;margin-bottom:0pt;">
+                <span style="font-variant-numeric: normal; font-variant-east-asian: normal; vertical-align: baseline;">
+                  如你選用付款方式（如
+                </span>
+                <span style="font-variant-numeric: normal; font-variant-east-asian: normal; vertical-align: baseline;">
+                  PayMe
+                </span>
+                <span style="font-variant-numeric: normal; font-variant-east-asian: normal; vertical-align: baseline;">
+                  ，
+                </span>
+                <span style="font-variant-numeric: normal; font-variant-east-asian: normal; vertical-align: baseline;">
+                  轉數快
+                </span>
+                <span style="font-variant-numeric: normal; font-variant-east-asian: normal; vertical-align: baseline;">
+                  ）
+                </span>
+                <span style="font-variant-numeric: normal; font-variant-east-asian: normal; vertical-align: baseline;">
+                  請於付款後將交易成功的畫面於二十四小時內WhatsApp到9887 7619，
+                </span>
+                <span style="font-variant-numeric: normal; font-variant-east-asian: normal; vertical-align: baseline;">
+                  否則視為未完成交易，
+                </span>
+                <span style="font-variant-numeric: normal; font-variant-east-asian: normal; vertical-align: baseline;">
+                  我們將自動取消你的訂單
+                </span>
+                ，
+                <span style="font-variant-numeric: normal; font-variant-east-asian: normal; vertical-align: baseline;">
+                  而不作另行通知
+                </span>
+                。
+              </p>
+            </li>
+            <li dir="ltr" style="list-style-type: disc; font-variant-numeric: normal; font-variant-east-asian: normal; vertical-align: baseline;">
+              <p dir="ltr" style="line-height:1.38;margin-top:0pt;margin-bottom:0pt;">
+                <span style="font-variant-numeric: normal; font-variant-east-asian: normal; vertical-align: baseline;">
+                  本公司保留不時改變付款方式的權利而不作另行通知
+                </span>
+                。
+              </p>
+            </li>
+          </ul>
+          <p dir="ltr" style="font-size: medium; color: rgb(23, 22, 22); line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;">
+            <span style="font-variant-numeric: normal; font-variant-east-asian: normal; vertical-align: baseline;">
+              其他
+            </span>
+            <span style="font-variant-numeric: normal; font-variant-east-asian: normal; vertical-align: baseline;">
+              細則
+            </span>
+          </p>
+          <ol style="font-size: medium; color: rgb(23, 22, 22); margin-top: 0px; margin-bottom: 0px;">
+            <li dir="ltr" style="list-style-type: decimal; font-variant-numeric: normal; font-variant-east-asian: normal; vertical-align: baseline;">
+              <p dir="ltr" style="line-height: 1.08; margin-top: 0pt; margin-bottom: 0pt;">
+                <span style="font-variant-numeric: normal; font-variant-east-asian: normal; vertical-align: baseline;">
+                  個人資料收集聲明
+                </span>
+              </p>
+            </li>
+          </ol>
+          <ul style="font-size: medium; color: rgb(23, 22, 22); margin-top: 0px; margin-bottom: 0px;">
+            <li dir="ltr" style="list-style-type: disc; font-variant-numeric: normal; font-variant-east-asian: normal; vertical-align: baseline;">
+              <p dir="ltr" style="line-height: 1.08; margin-top: 0pt; margin-bottom: 0pt;">
+                <span style="font-variant-numeric: normal; font-variant-east-asian: normal; vertical-align: baseline;">
+                  當閣下使用本網站或登記成為會員，閣下可能須向EXPLORECATERVICESHK提供閣下或其他第三方的個人資料（下稱「資料」），包括但不限於閣下或其他第三方的姓名、性別、年齡群組、手提電話號碼、聯絡資料和電子郵件地址。閣下同意此等資料是閣下自願向EXPLORECATERVICESHK提供的，若涉及第三方的個人資料，閣下是合法取得並已獲該第三方的同意由閣下向EXPLORECATERVICESHK提供，而該第三方亦同意本使用條款
+                </span>
+                。
+              </p>
+            </li>
+          </ul>
+          <ul style="font-size: medium; color: rgb(23, 22, 22); margin-top: 0px; margin-bottom: 0px;">
+            <li dir="ltr" style="list-style-type: disc; font-variant-numeric: normal; font-variant-east-asian: normal; vertical-align: baseline;">
+              <p dir="ltr" style="line-height: 1.08; margin-top: 0pt; margin-bottom: 0pt;">
+                <span style="font-variant-numeric: normal; font-variant-east-asian: normal; vertical-align: baseline;">
+                  若閣下提供的資料不齊全或不正確，EXPLORECATERVICESHK將無法向閣下提供或繼續提供有關服務，或可能不容許或終止閣下進入本網站。閣下須向EXPLORECATERVICESHK保證所提供的資料為準確、屬實、有效和完整的。否則，EXPLORECATERVICESHK有權在閣下不獲知會的情況下拒絕閣下於現時或將來使用本網站及其提供之服務
+                </span>
+                。
+              </p>
+            </li>
+          </ul>
+          <ol style="font-size: medium; color: rgb(23, 22, 22); margin-top: 0px; margin-bottom: 0px;" start="2">
+            <li dir="ltr" style="list-style-type: decimal; font-variant-numeric: normal; font-variant-east-asian: normal; vertical-align: baseline;">
+              <p dir="ltr" style="line-height: 1.08; margin-top: 0pt; margin-bottom: 0pt;">
+                <span style="font-variant-numeric: normal; font-variant-east-asian: normal; vertical-align: baseline;">
+                  個人使用
+                </span>
+              </p>
+            </li>
+          </ol>
+          <ul style="font-size: medium; color: rgb(23, 22, 22); margin-top: 0px; margin-bottom: 0px;">
+            <li dir="ltr" style="list-style-type: disc; font-variant-numeric: normal; font-variant-east-asian: normal; vertical-align: baseline;">
+              <p dir="ltr" style="line-height: 1.08; margin-top: 0pt; margin-bottom: 0pt;">
+                <span style="font-variant-numeric: normal; font-variant-east-asian: normal; vertical-align: baseline;"
+                >本網站所載的資訊均僅供參考。你同意不以任何方式抄襲、出版、分發、傳送、修改、展示、上傳、發布或複製本網站的任何內容或創作衍生作品或利用本網站的內容
+              </span>
+              。
+            </p>
+          </li>
+        </ul>
+        <ol style="color: rgb(23, 22, 22); margin-top: 0px; margin-bottom: 0px;" start="3"><li dir="ltr" style="list-style-type: decimal; font-variant-numeric: normal; font-variant-east-asian: normal; vertical-align: baseline;">
+          <h3 dir="ltr" style="line-height: 1.08; margin-top: 0pt; margin-bottom: 0pt;">
+            <span style="font-variant-numeric: normal; font-variant-east-asian: normal; vertical-align: baseline; font-size: medium;">
+              合法使用本網站
+            </span>
+          </h3>
+        </li>
+      </ol>
+      <ul style="font-size: medium; color: rgb(23, 22, 22); margin-top: 0px; margin-bottom: 0px;">
+        <li dir="ltr" style="list-style-type: disc; font-variant-numeric: normal; font-variant-east-asian: normal; vertical-align: baseline;">
+          <p dir="ltr" style="line-height: 1.08; margin-top: 0pt; margin-bottom: 0pt;">
+            <span style="font-variant-numeric: normal; font-variant-east-asian: normal; vertical-align: baseline;">
+              你使用本網站必須只用於合法目的，不得侵犯本網站的權利，包括但不限於知識產權和隱私權，不得干擾或更改本網站的運作
+            </span>
+            。
+          </p>
+        </li>
+        <li dir="ltr" style="list-style-type: disc; font-variant-numeric: normal; font-variant-east-asian: normal; vertical-align: baseline;">
+          <p dir="ltr" style="line-height: 1.08; margin-top: 0pt; margin-bottom: 0pt;">
+            <span style="font-variant-numeric: normal; font-variant-east-asian: normal; vertical-align: baseline;">
+              我們保留取消你的會員資格或拒絕你進入本網站並使用其服務而不作另行通知的權利。我們不須為你無法訪問我們的網站而導致的任何損失或損害承擔任何法律責任
+            </span>
+            。
+          </p>
+        </li>
+      </ul>
+      <ol style="font-size: medium; color: rgb(23, 22, 22); margin-top: 0px; margin-bottom: 0px;" start="4">
+        <li dir="ltr" style="list-style-type: decimal; font-variant-numeric: normal; font-variant-east-asian: normal; vertical-align: baseline;">
+          <p dir="ltr" style="line-height: 1.08; margin-top: 0pt; margin-bottom: 0pt;">
+            <span style="font-variant-numeric: normal; font-variant-east-asian: normal; vertical-align: baseline;">
+              賠償
+            </span>
+          </p>
+        </li>
+      </ol>
+      <ul style="font-size: medium; color: rgb(23, 22, 22); margin-top: 0px; margin-bottom: 0px;">
+        <li dir="ltr" style="list-style-type: disc; font-variant-numeric: normal; font-variant-east-asian: normal; vertical-align: baseline;">
+          <p dir="ltr" style="line-height: 1.08; margin-top: 0pt; margin-bottom: 8pt;">
+            <span style="font-variant-numeric: normal; font-variant-east-asian: normal; vertical-align: baseline;">
+              如因閣下涉及違反使用條款或涉及不合法行為而引起任何訴訟、法律程序、申索、賠償、損害、傷害、債務、損失、費用和開支（包括合理的律師費用和開支），閣下同意向EXPLORECATERVICESHK及其子公司、相關公司、關聯公司、高級職員、僱員、合約承辦商、代理商、共同品牌所有人及／或其他合夥人所受的損害及損失（包括但不限於所產生的法律費用）作出全面補償
+            </span>
+            。
+          </p>
+        </li>
+      </ul>
+      <p dir="ltr" style="font-size: medium; color: rgb(23, 22, 22); line-height: 1.08; margin-top: 0pt; margin-bottom: 0pt; padding: 0pt 0pt 8pt;">
+        &nbsp;
+      </p>
+      <p dir="ltr" style="font-size: medium; color: rgb(23, 22, 22); line-height: 1.08; margin-top: 0pt; margin-bottom: 0pt; padding: 0pt 0pt 8pt;">
+        <span style="font-variant-numeric: normal; font-variant-east-asian: normal; vertical-align: baseline;">
+          本網站全為從香港特別行政區進入網站的人士而設</span>，我們不能保證本網站所有訊息符合其他地區的法律或法規。
+        </p>
+        <p dir="ltr" style="font-size: medium; color: rgb(23, 22, 22); line-height: 1.08; margin-top: 0pt; margin-bottom: 0pt; padding: 0pt 0pt 8pt;">
+          <span id="docs-internal-guid-3f503988-7fff-cd64-28c9-1a5a09d6d3ce">
+          </span>
+        </p>
+        <p dir="ltr" style="font-size: medium; color: rgb(23, 22, 22); line-height: 1.08; margin-top: 0pt; margin-bottom: 8pt;">
+          <span style="font-variant-numeric: normal; font-variant-east-asian: normal; vertical-align: baseline;">
+            如有任何爭議，EXPLORECATERVICESHK有限公司保留最終決定權
+          </span>
+          。
+        </p>
+      </span>
+    </div>
+  </div>
+
+
+</div>
+<!--main body end-->
+
+
+
+<!--footer start-->
+
+
+
+<table  class="foot">
+    <tr class="one_row">
+      <td class="foot-lef-col">
+          <h4><span style="font-size:24px;">顧客服務</span></h4>
+          <p><a href="../pages/QnA.html" target="_self"><span>常見問題</span></a></p>
+          <p>​<a href="../pages/delivery.html" target="_self"><span>運送服務方式</span></a></p>
+          <p><a href="../pages/payment.html" target="_self"><span>付款服務方式</span></a></p>
+        </td>
+        <td class="foot-right-col">
+          <h4><span style="font-size:24px;">聯絡我們</span></h4>
+              <ul class="list-unstyled">
+                <li>電話:9887 7619(可whatsapp）</li>
+                <li>時間:12:00-22:00</li>
+                <li>電郵:info@aoaodelivery.com</li>
+              </ul>
+        </td>
+    </tr>
+  </table>
+  <br>
+  <table class="foot">
+    <tr class="warning-container">
+      <td class="warning-wrapper">
+          <p>* 圖片只供參考 *</p>
+          <p>* 未經許可，網站上的圖片及文章不得轉載或引用 *</p>
+          <p>即日外賣急單專線: 9887 7819 (可WhatsApp聯絡)</p>
+          <p>電郵: info@aoaodelivery.com</p>
+        </td>
+    </tr>
+    <tr>  <td class="image-footer">
+            <img alt="HKICL | 轉數快" src="https://www.hkma.gov.hk/media/chi/img/smart-consumers/fps_c.png">
+            <img alt="PAYME " src="https://static.wixstatic.com/media/576ba0_ab6e102b8afe49d59460133760e44e17~mv2.png/v1/fill/w_520,h_520,al_c,q_85,usm_0.66_1.00_0.01/logo_payme_en.webp">
+          </td>
+    </tr>
+    <tr>
+      <td>
+      <p class="text-center"><a href="../pages/aboutus.html" style="background-color: rgb(255, 255, 255); font-size: 16px;" target="_self"><span>關於我們</span></a> | <a href="../pages/terms.html" target="_self"><span>條款及細則 </span></a>| 2022 © AOAODELIVERY</p>
+    </td>
+    </tr>
+
+</table>
+<!--footer end-->
+
+  </body>
+</html>

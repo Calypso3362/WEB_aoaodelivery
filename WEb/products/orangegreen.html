@@ -1,0 +1,1103 @@
+<html>
+  <head>
+
+    	<meta charset="utf-8">
+      <link rel="stylesheet" media="all" href="https://cdn.shoplineapp.com/assets/common-f47625baea59b7f28766c213f44af5679a3f7198f77cf8bb89041274db97940a.css">
+      <link rel="stylesheet" media="all" href="https://cdn.shoplineapp.com/assets/application-6f3b55f8b8d864ba63c7dfe842d4d69459c535d0e99fe9d00ab5fa8c5dffe250.css">
+      <link rel="stylesheet" media="all" href="https://cdn.shoplineapp.com/assets/themes/slate-b6f9c73311a1041d6bd6386ce8911939cad346fdc954b1c089f947227c81ae99.css">
+      <!--ICON-->
+      <link rel="icon" type="image/png" href="https://aoaodelivery/image/icon.jpg">
+      <script src="../shopping_cart.js"></script>
+      <link rel="stylesheet" type="text/css" href="../footer.css">
+
+      <title>香橙綠茶（500ml）</title>
+
+
+      <meta name="description" content="香橙綠茶（500ml）">
+
+<style>
+/*product wrapper style start*/
+div.product-wrapper{
+  width: 100%;
+}
+/*product wrapper style end*/
+
+/*breadcrumb wrapper style start*/
+div.breadcrumb-wrapper{
+  margin-left:130px;
+  margin-right: 130px;
+}
+/*breadcrumb wrapper style end*/
+
+/*product-info wrapper style start*/
+div.product-info-wrapper{
+  margin-left:130px;
+  margin-right: 130px;
+}
+/*product-info wrapper style end*/
+
+/*decription-wrapper style start*/
+div.decription-wrapper{
+  margin-left:130px;
+  margin-right: 130px;
+}
+/*decription-wrapper style end*/
+
+/*customer-reviews-wrapper style start*/
+div.customer-reviews-wrapper{
+  margin-left:130px;
+  margin-right: 130px;
+}
+/*customer-reviews-wrapper style end*/
+
+/*related-product-wrapper style start*/
+div.related-product-wrapper{
+  margin-left:130px;
+  margin-right: 130px;
+}
+/*related-product-wrapper style end*/
+
+</style>
+
+<style media="screen">
+.fixed-menu-wrapper{
+  position: relative;
+  margin-top: 0.5%;
+  z-index: 3;
+}
+.cart-btn{
+  right: 3px;
+  font-size: 13px;
+  border-radius: 3px;
+  border: 1px solid #aaa;
+  padding: 5px 8px;
+  font-weight: 700;
+  position: fixed;
+}
+.media-btn{
+  margin-left: 0.1%;
+  margin-right: 0.1%;
+  z-index:5;
+}
+.media-wrapper{
+  margin-left: 10%;
+  width: 10%;
+  position: fixed;
+}
+</style>
+</head>
+<body onload="genCart()">
+
+
+  <div class="fixed-menu-wrapper" id="fixed-menu">
+    <div class="mobile_btn_container" id="mobile_menu_btn" onclick="myFunction(this)">
+      <div class="bar1"></div>
+      <div class="bar2"></div>
+      <div class="bar3"></div>
+    </div>
+    <span class="media-wrapper">
+      <a class="media-btn" href="https://www.facebook.com/wishao.hk/"><i class="fa fa-facebook-square"></i></a>
+      <a class="media-btn" href="https://www.instagram.com/aoao.delivery/"><i class="fa fa-instagram"></i></a>
+      <a class="media-btn" href="https://www.instagram.com/aoao.delivery/"><i class="fa fa-envelope"></i></a>
+    </span>
+
+    <img src="../image/icon.png" id="img_mobile">
+
+    <a class="cart-btn" onclick="OpenCart()">
+        <span class="fa fa-shopping-cart"></span>
+        <span>購物車</span>
+        <span>
+          <span>(</span>
+          <span id="change-quantity">0</span>
+          <span>)</span>
+        </span>
+    </a>
+  </div>
+
+
+
+<!--scroll down menu start-->
+<div id="navbar_div">
+
+    <a href="https://aoaodelivery.com/" id="scrolllink"><img src="../image/icon.png">
+    </a>
+    <ul>
+  <li link-highlight="/">
+    <a link-highlight="/" href="https://aoaodelivery.com/" target="" ng-non-bindable="">首頁</a>
+  </li>
+<!-- Has dropdown links -->
+  <!-- doesn't have dropdown links -->
+  <li link-highlight="categories/catering_set">
+    <a link-highlight="categories/catering_set" href="../categories/catering_set.html" target="" ng-non-bindable="">多人到會套餐</a>
+  </li>
+<!-- Has dropdown links -->
+  <li class="nav-dropdown" link-highlight="categories/alacarte">
+    <a class="nav-dropdown-toggle" id="herepress" link-highlight="../categories/alacarte" href="../categories/alacarte.html" target="" ng-non-bindable="">單點到會美食 <span class="caret" id="dropp"></span></a>
+    <ul class="nav-dropdown-menu" id="herecome">
+          <li link-highlight="">
+            <a link-highlight="" href="../categories/salad.html" target="" ng-non-bindable="">沙律&nbsp/&nbsp小食</a>
+          </li>
+        <li link-highlight="">
+          <a link-highlight="" href="../categories/meat.html" target="" ng-non-bindable="">肉類</a>
+        </li>
+        <li link-highlight="">
+          <a link-highlight="" href="../categories/seafood.html" target="" ng-non-bindable="">海鮮</a>
+        </li>
+        <li link-highlight="">
+          <a link-highlight="" href="../categories/pastas.html" target="" ng-non-bindable="">意粉</a>
+        </li>
+        <li link-highlight="">
+          <a link-highlight="" href="../categories/risotto.html" target="" ng-non-bindable="">意大利飯</a>
+        </li>
+        <li link-highlight="">
+          <a link-highlight="" href="../categories/dessert.html" target="" ng-non-bindable="">甜品</a>
+        </li>
+        <li link-highlight="">
+          <a link-highlight="" href="../categories/drinks.html" target="" ng-non-bindable="">飲品</a>
+        </li>
+        <li link-highlight="">
+          <a link-highlight="" href="../categories/tableware.html" target="" ng-non-bindable="">額外餐具</a>
+        </li>
+    </ul>
+  </li>
+  <li >
+    <a  href="../pages/delivery.html" target="" ng-non-bindable="">運送服務方式</a>
+  </li>
+  <li l>
+    <a  href="../pages/payment.html" target="" ng-non-bindable="">付款服務方式</a>
+  </li>
+  <li >
+    <a  href="../pages/QnA.html" target="" ng-non-bindable="">常見問題</a>
+  </li>
+  </ul>
+</div>
+<!--scroll down menu end-->
+
+<!--mobile menu start-->
+
+
+
+
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <li link-highlight="/">
+    <a link-highlight="/" href="https://aoaodelivery.com/" target="" ng-non-bindable="">首頁</a>
+  </li>
+<!-- Has dropdown links -->
+  <!-- doesn't have dropdown links -->
+  <li link-highlight="categories/catering_set">
+    <a link-highlight="categories/catering_set" href="../categories/catering_set.html" target="" ng-non-bindable="">多人到會套餐</a>
+  </li>
+<!-- Has dropdown links -->
+  <li class="nav-dropdown" link-highlight="categories/alacarte">
+    <a class="nav-dropdown-toggle" link-highlight="categories/alacarte" href="../categories/alacarte.html" target="" ng-non-bindable="">單點到會美食 <span class="caret"></span></a>
+    <ul class="nav-dropdown-menu">
+
+            <li link-highlight="">
+              <a link-highlight="" href="../categories/salad.html" target="" ng-non-bindable="">沙律&nbsp/&nbsp小食</a>
+            </li>
+        <li link-highlight="">
+          <a link-highlight="" href="../categories/meat.html" target="" ng-non-bindable="">肉類</a>
+        </li>
+        <li link-highlight="">
+          <a link-highlight="" href="../categories/seafood.html" target="" ng-non-bindable="">海鮮</a>
+        </li>
+        <li link-highlight="">
+          <a link-highlight="" href="../categories/pastas.html" target="" ng-non-bindable="">意粉</a>
+        </li>
+        <li link-highlight="">
+          <a link-highlight="" href="../categories/risotto.html" target="" ng-non-bindable="">意大利飯</a>
+        </li>
+        <li link-highlight="">
+          <a link-highlight="" href="../categories/dessert.html" target="" ng-non-bindable="">甜品</a>
+        </li>
+        <li link-highlight="">
+          <a link-highlight="" href="../categories/drinks.html" target="" ng-non-bindable="">飲品</a>
+        </li>
+        <li link-highlight="">
+          <a link-highlight="" href="../categories/tableware.html" target="" ng-non-bindable="">額外餐具</a>
+        </li>
+    </ul>
+  </li>
+  <li >
+    <a  href="../pages/delivery.html" target="" ng-non-bindable="">運送服務方式</a>
+  </li>
+  <li l>
+    <a  href="../pages/payment.html" target="" ng-non-bindable="">付款服務方式</a>
+  </li>
+  <li >
+    <a  href="../pages/QnA.html" target="" ng-non-bindable="">常見問題</a>
+  </li>
+  </ul>
+</div>
+<!--mobile menu end-->
+
+    <!--shopping cart popup windows start-->
+
+
+    <!--popup window css start-->
+    <style>
+    .Cart-shadow{
+      width: 100%;
+      height: 100%;
+      background: grey;
+      z-index: 8;
+      position: absolute;
+      opacity: 0.7;
+      display:none;
+    }
+    .Cart-Container{
+      width: 70%;
+      height: 80vh;
+      background-color: #BF6B59;
+      border-radius: 20px;
+      box-shadow: 0px 25px 40px #1687d933;
+      left: 15%;
+      top: 2.5%;
+      position: absolute;
+      z-index: 10;
+      display: none;
+    }
+    .scart-header{
+      margin: auto;
+      width: 90%;
+      height: 15%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .scart-heading{
+      font-size: 20px;
+      font-family: ‘Open Sans’;
+      font-weight: 700;
+      color: #2F3841;
+    }
+    .scart-remove{
+      font-size: 14px;
+      font-family: ‘Open Sans’;
+      font-weight: 600;
+      color: #FFF9E3;
+      cursor: pointer;
+      border-bottom: 1px solid #FFFFFF;
+    }
+    .scart-items{
+      width: 100%;
+      margin: auto;
+    }
+    .scart-image{
+      float: left;
+      width: 15%;
+      text-align: right;
+      height:100px;
+    }
+    .scart-image>img{
+      width: 100px;
+      height: 100px;
+      margin-right: 10px;
+    }
+    .scart-items-about{
+      float: right;
+      width: 85%;
+      height: 100px;
+    }
+    .scart-items-title{
+      font-size: 24px;
+      font-weight: bold;
+
+    }
+    .scart-remove-item{
+      text-align: left;
+    }
+    /*change css of delete links*/
+    #scart-remove-item-link-orangegreen{
+      font-weight: lighter;
+      text-decoration: none;
+      color: #E7DECC;
+      cursor: pointer;
+    }
+    .scart-items-wrapper{
+      position:absolute;
+      width:100%;
+    }
+    </style>
+    <!--popup window css end-->
+
+
+
+    <!--popup window script start-->
+    <!--popup window script end-->
+
+    <!--popup window content start-->
+      <div class="Cart-shadow" id="Cart-shadow-id" onclick="closeCart()" ></div>
+      <div class="Cart-Container" id="Cart-Container-id" >
+        <div class="scart-header">
+          <h3 class="scart-heading">購物車</h3>
+          <h5 class="scart-remove" onclick="clearAllItems()">清除所有</h5>
+        </div>
+
+
+
+        <!--variate part-->
+        <div class="scart-items-wrapper" id="scart-item-wrap">
+        </div>
+
+
+
+
+        <div class="scart-checkout-wrapper" style="position:absolute;width:100%; bottom:2%;">
+          <hr style="width: 66%;float: right;margin-right: 5%;">
+          <div class=”scart-checkout” style="float:right;width:38%;margin-right:5%;">
+            <div class=”scart-total” style="width: 100%; display: flex; justify-content: space-between;">
+              <div>
+                <div class=”scart-subtotal” style="font-size: 22px; font-family: ‘Open Sans’; font-weight: 700; color: #202020;">總數</div>
+                <div class=”scart-items-total” style="font-size: 16px; font-family: ‘Open Sans’; font-weight: 500; color: #F0F0F0; line-height: 10px;">件數: <span class="scart-items-quantity" id="quantity-for-items"></span></div>
+              </div>
+              <div class=”scart-total-price” id="price-for-scart"style="font-size: 36px;font-family: ‘Open Sans’;font-weight: 900;color: #202020;"></div>
+            </div>
+            <button class=”scart-button” style="margin-top: 5px;width: 100%;height: 40px;border: none;background: linear-gradient(to bottom right, #B8D7FF, #8EB7EB);border-radius: 20px;cursor: pointer;font-size: 16px;font-family: ‘Open Sans’;font-weight: 600;color: #202020;" onclick="checkoutConfirm()">訂單結帳</button>
+          </div>
+        </div>
+
+      </div>
+
+
+
+
+    <!--popup window content end-->
+
+
+
+
+
+    <!--shopping cart popup windows end-->
+
+
+
+    <!--shopping cart end-->
+
+
+
+
+
+    <nav class="nav-bar" id="nav_nav_wrap">
+
+    <div class="navbar-wrapper" >
+      <div class="navbar hidden-xs" role="navigation">
+        <div class="navbar-header-wrapper">
+          <div class="container">
+            <div class="navbar-header">
+              <a href="https://aoaodelivery.com/">
+                <img src="../image/icon.png" class="logo-image sl-lazy-image" data-resizing-segment="140" data-size="x280">
+              </a>
+            </div>
+          </div> <!--container-->
+        </div>
+        <div class="navbar-menu-wrapper">
+          <div class="container">
+            <div class="navbar-menu hidden-xs">
+              <ul class="text-primary-color">
+    <!-- Has dropdown links -->
+      <!-- doesn't have dropdown links -->
+      <li link-highlight="/">
+        <a link-highlight="/" href="https://aoaodelivery.com/" target="" ng-non-bindable="">首頁</a>
+      </li>
+    <!-- Has dropdown links -->
+      <!-- doesn't have dropdown links -->
+      <li link-highlight="../categories/catering_set">
+        <a link-highlight="../categories/catering_set" href="../categories/catering_set.html" target="" ng-non-bindable="">多人到會套餐</a>
+      </li>
+    <!-- Has dropdown links -->
+      <li class="nav-dropdown" link-highlight="categories/alacarte">
+        <a class="nav-dropdown-toggle" link-highlight="categories/alacarte" href="../categories/alacarte.html" target="" ng-non-bindable="">單點到會美食 <span class="caret"></span></a>
+        <ul class="nav-dropdown-menu">
+
+                <li link-highlight="">
+                  <a link-highlight="" href="../categories/salad.html" target="" ng-non-bindable="">沙律&nbsp/&nbsp小食</a>
+                </li>
+            <li link-highlight="">
+              <a link-highlight="" href="../categories/meat.html" target="" ng-non-bindable="">肉類</a>
+            </li>
+            <li link-highlight="">
+              <a link-highlight="" href="../categories/seafood.html" target="" ng-non-bindable="">海鮮</a>
+            </li>
+            <li link-highlight="">
+              <a link-highlight="" href="../categories/pastas.html" target="" ng-non-bindable="">意粉</a>
+            </li>
+            <li link-highlight="">
+              <a link-highlight="" href="../categories/risotto.html" target="" ng-non-bindable="">意大利飯</a>
+            </li>
+            <li link-highlight="">
+              <a link-highlight="" href="../categories/dessert.html" target="" ng-non-bindable="">甜品</a>
+            </li>
+            <li link-highlight="">
+              <a link-highlight="" href="../categories/drinks.html" target="" ng-non-bindable="">飲品</a>
+            </li>
+            <li link-highlight="">
+              <a link-highlight="" href="../categories/tableware.html" target="" ng-non-bindable="">額外餐具</a>
+            </li>
+        </ul>
+      </li>
+      <li >
+        <a  href="../pages/delivery.html" target="" ng-non-bindable="">運送服務方式</a>
+      </li>
+      <li l>
+        <a  href="../pages/payment.html" target="" ng-non-bindable="">付款服務方式</a>
+      </li>
+      <li >
+        <a  href="../pages/QnA.html" target="" ng-non-bindable="">常見問題</a>
+      </li>
+    </ul>
+            </div>
+          </div> <!--container-->
+        </div>
+      </div><!--navbar-->
+    </div><!--navbar-wrapper-->
+  </nav>
+
+<!--product content start-->
+  <div class="body-content-wrapper" id="body-content">
+    <div class="product-detail-container">
+            <!--top bar -->
+          <div class="breadcrumb-wrapper">
+              <!-- breadcrumb start-->
+              <ol class="breadcrumb">
+                <li class="text-primary-color dark-primary">
+                  <a href="">全部商品</a>
+                </li>
+                <li class="text-primary-color dark-primary">
+                  <a href="../categories/alacarte.html">單點到會美食</a>
+                </li>
+                <li class="text-primary-color dark-primary">
+                  <a href="../categories/drinks.html">飲品</a>
+                </li>
+              </ol>
+              <!-- breadcrumb end-->
+
+              <!-- search box start-->
+              <!-- search box end-->
+            </div>
+            <!--top bar end -->
+
+            <!--main section start-->
+
+            <!-- Loading placeholder for product show page -->
+            <div class="product-info-wrapper">
+
+
+
+
+<!--left col start-->
+
+
+              <!-- Variant Gallery -->
+              <div class="col-md-6">
+                <product-variant-gallery item-size="72" item-margin="10" is-horizontal="true" class="ng-scope"><!-- ngIf: selectedMedia -->
+                  <div class="variant-gallery-stage js-variant-gallery-stage text-center ng-scope" ng-if="selectedMedia" ng-swipe-left="selectNext()" ng-swipe-right="selectPrevious()">
+  <!-- ngIf: !shouldShowAllImage -->
+                    <a ng-if="!shouldShowAllImage" ng-click="enlargeImage(selectedMedia, $event)" class="ng-scope">
+                        <img id="sl-product-image" class="img-responsive inline-block" data-ref-element=".variant-gallery-stage" ng-src="../image/orangegreen.jpg" alt="" src="../image/orangegreen.jpg">
+                    </a><!-- end ngIf: !shouldShowAllImage -->
+  <!-- ngRepeat: media in medias track by media._id --><!-- ngIf: shouldShowAllImage --><!-- end ngRepeat: media in medias track by media._id -->
+                  </div><!-- end ngIf: selectedMedia -->
+                  <div class="variant-gallery row no-arrow" ng-class="{'no-arrow': canSelectPrevious() !== true &amp;&amp; canSelectNext() !== true }">
+                    <style type="text/css" class="ng-binding">
+                      .variant-gallery-control {
+                        line-height: 72px;
+                      }
+                      .variant-image {
+                        width: 72px;
+                        height: 72px;
+                        margin-right: 10px;
+                      }
+                      @media screen and (min-width: 769px) {
+                        product-variant-gallery.vertical .variant-gallery-stage {
+                          padding-right: 77px;
+                        }
+                        product-variant-gallery.vertical .variant-gallery {
+                          right: 72px;
+                        }
+                      }
+                    </style>
+                    <div class="variant-gallery-control js-variant-gallery-control left ng-hide hide disable" ng-click="selectPrevious({scrollToImg: shouldShowAllImage})" ng-class="{ hide: canSelectPrevious() !== true &amp;&amp; canSelectNext() !== true, disable: canSelectPrevious() !== true }" ng-show="medias.length > maxImageContain">
+                      <i class="fa fa-caret-left fa-inverse" aria-hidden="true"></i>
+                    </div>
+                    <div class="variant-gallery-scroll-container js-variant-gallery-scroll-container">
+                      <div class="variant-gallery-slider" style="width: 82px;">
+                        <!-- ngRepeat: media in medias --><div class="variant-image js-variant-image ng-scope selected" ng-class="{ selected: media == selectedMedia }" ng-repeat="media in medias">
+                        <a ng-click="selectMedia(media, {scrollToImg: shouldShowAllImage, galleryScroll: false})">
+
+                          <!--thumbnail pic-->
+                          <div class="image-container sl-lazy-image" data-resizing-segment="100" ng-style="getThumbnailStyle(media)" alt="" style="background-image:url(../image/orangegreen.jpg);" data-size="200x"></div>
+                        </a>
+                      </div><!-- end ngRepeat: media in medias -->
+                    </div>
+                  </div>
+                  <div class="variant-gallery-control js-variant-gallery-control right ng-hide hide disable" ng-click="selectNext({scrollToImg: shouldShowAllImage})" ng-class="{ hide: canSelectPrevious() !== true &amp;&amp; canSelectNext() !== true, disable: canSelectNext() !== true  }" ng-show="medias.length > maxImageContain">
+                    <i class="fa fa-caret-right fa-inverse" aria-hidden="true"></i>
+                  </div>
+                  <!-- ngIf: enableOwlCarouselPopUp() -->
+                </div>
+              </product-variant-gallery>
+
+
+
+
+<!--left col end-->
+
+
+
+                  <div class="visible-lg visible-md">
+                    <!--Share actions-->
+                    <div class="share-box">
+                      <div class="action-title global-secondary">分享到</div>
+                      <div class="share-buttons">
+                          <div id="atstbx" class="at-resp-share-element at-style-responsive addthis-smartlayers addthis-animated at4-show" aria-labelledby="at-a0dc2b10-c088-4a89-ae14-504186c8594b" role="region">
+                            <div class="at-share-btn-elements">
+                              <iframe src="https://www.facebook.com/plugins/share_button.php?href=https%3A%2F%2Faoaodelivery.com%2Fproducts%2Forangegreen.html&layout=button&size=small&width=60&height=20&appId" width="60" height="20" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+                              <a href="https://api.whatsapp.com/send?text=https://aoaodelivery.com/products/orangegreen.html">
+                                <i class="fa fa-whatsapp" style="font-size:24px;color:#fff;background:linear-gradient(#25d366,#25d366) 14% 84%/16% 16% no-repeat,radial-gradient(#25d366 58%,transparent 0);">
+                                </i>
+                              </a>
+                              <i class="fa fa-link" aria-hidden="true" onclick="copyToClipboard()" style="font-size:20px;"></i>
+                              <script type="text/javascript">
+                                function copyToClipboard(text) {
+                                  var inputc = document.body.appendChild(document.createElement("input"));
+                                  inputc.value = window.location.href;
+                                  inputc.focus();
+                                  inputc.select();
+                                  document.execCommand('copy');
+                                  inputc.parentNode.removeChild(inputc);
+                                }
+                              </script>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+<!--End share actions-->
+
+                  </div>
+                </div>
+
+
+
+
+<!--right col start-->
+<!--right col start-->
+<!--right col start-->
+<!--right col start-->
+<!--right col start-->
+<!--right col start-->
+<!--right col start-->
+<!--right col start-->
+<!--right col start-->
+<!--right col start-->
+<!--right col start-->
+                <div class="col-md-6 add-to-cart ">
+                  <div ng-non-bindable="" class="title global-primary dark-primary">
+                    <!--name change here-->
+                    <h1>香橙綠茶（500ml）</h1>
+                  </div>
+                    <p class="product-summary product-summary-block" ng-non-bindable="">***注意：</br>截單時間為取貨前一天晚上11點前，如急單請先WhatsApp 9887 7619，截單時間以WhatsApp時間為準</p>
+                    <hr>
+
+                    <div class="not-same-price">
+                      <div class="global-primary dark-primary price-regular price js-price ">
+                        <!--price change here-->
+                        HK$23.00
+                      </div>
+                    </div>
+
+                    <!-- ngIf: ratingSource == 'shopline' && shoplineProductReview -->
+
+                    <!-- ngIf: ratingSource == 'amazon' && amazonProductReview -->
+
+
+
+                    <!-- variations -->
+                    <!-- Product Set -->
+                    <!-- End of Product Set -->
+
+                    <!-- Product Set Revamp -->
+                    <!-- End of Product Set Revamp -->
+
+                    <!-- No Variation && Add to Cart -->
+                    <div ng-show="state.checkoutReady &amp;&amp; hasStock &amp;&amp; state.productSetCheckoutReady" class="product-variation-dropdown no-variation" product-variation-dropdown="">
+                      <div class="action-title global-secondary">
+                        <!-- ngIf: !productSetService.isProductSetRevampEnabled(product) --><span ng-if="!productSetService.isProductSetRevampEnabled(product)" class="ng-scope">數量</span><!-- end ngIf: !productSetService.isProductSetRevampEnabled(product) -->
+                        <!-- ngIf: productSetService.isProductSetRevampEnabled(product) -->
+                      </div>
+
+
+
+                      <!--get data quantity here-->
+                      <div class="quantity">
+                        <!-- Quantity as Inputbox -->
+
+
+                        <!--data of quantity here-->
+                        <script type="text/javascript">
+                          function decQuantity(){
+                            var num;
+                            num = parseInt(document.getElementById('orangegreen').value);
+                            if(num<=1){
+                                /*print error msg 2*/
+                            } else{
+                              num-=1;
+                              document.getElementById('orangegreen').value=num;
+                            }
+                          }
+
+
+                          function incQuantity(){
+                            var num;
+                            num = parseInt(document.getElementById('orangegreen').value);
+                            if(num>=99999){
+                                /*print error msg 2*/
+                            } else{
+                              num+=1;
+                              document.getElementById('orangegreen').value=num;
+                            }
+                          }
+                        </script>
+
+
+
+
+
+                        <div class="form-inline form-quantity form-block" style="display:inline-block;margin-bottom:10px" ng-show="state.checkoutReady" ng-class="state.checkoutReady ? 'form-block' : null"><div class="input-group">
+                          <span class="input-group-btn"><button type="button" class="btn btn-default btn-checkout" onclick="decQuantity()"><i class="fa fa-minus"></i></button></span>
+                          <input class="item_quantity" id="orangegreen" value="1" maxlength="5" type="text" onkeypress="return (event.charCode !=8 && event.charCode ==0 || (event.charCode >= 48 && event.charCode <= 57))">
+                          <span class="input-group-btn"><button type="button" class="btn btn-default btn-checkout" onclick="incQuantity()"><i class="fa fa-plus"></i></button></span>
+                        </div>
+                      </div>
+
+
+
+<!--input end-->
+
+<!--shopping cart start-->
+
+
+                      <!--Code for shop cart-->
+                      <script >
+                        function addItemToCart(){
+                          var num;
+                          var this_time_num;
+                          num = parseInt(document.getElementById('orangegreen').value);
+                          this_time_num=num;
+                          if (localStorage.getItem('orangegreen_ordered')==1){
+                            num = num+parseInt(localStorage.getItem("quantity_orangegreen"));
+                            quantity_orangegreen=num;
+                            localStorage.setItem('quantity_orangegreen', quantity_orangegreen);
+                          } else{
+                            quantity_orangegreen = num;
+                            localStorage.setItem('quantity_orangegreen', quantity_orangegreen);
+                          }
+                          Shop_Cart_Open = true;
+                          document.getElementById('Cart-Container-id').style.display= "block";
+                          document.getElementById('Cart-shadow-id').style.display = "block";
+                          window.scrollTo(0,0);
+
+                          //set to items to be added
+
+                          //create item on shopping Cart
+                          if(localStorage.getItem('orangegreen_ordered')!=1){
+                          //creation
+                            var first_div = document.createElement("div");
+                            first_div.classList.add("scart-items");
+                            var sec_img_div = document.createElement("div");
+                            sec_img_div.classList.add("scart-image");
+                            var img_cart = document.createElement("img");
+                            img_cart.src="../image/orangegreen.jpg";
+                            var third_div = document.createElement("div");
+                            third_div.classList.add("scart-items-about");
+                            //change name of the item
+                            var first_p = document.createElement("p");
+                            first_p.classList.add("scart-items-title");
+                            first_p.innerHTML= "香橙綠茶（500ml）";
+
+                            var sec_p = document.createElement("p");
+                            sec_p.classList.add("scart-remove-item");
+                            //change the value of the item
+                            var first_span = document.createElement("span");
+                            first_span.classList.add("scart-items-count-num");
+                            first_span.innerHTML=localStorage.getItem("quantity_orangegreen");
+                            first_span.id="scart-quantity-orangegreen";
+                            //change the price of the item
+                            var sec_span = document.createElement("span");
+                            sec_span.classList.add("scart-items-count-price");
+                            sec_span.innerHTML="HK$ 23.00        ";
+                            //change delete link
+                            var a_link = document.createElement("span");
+                            a_link.id="scart-remove-item-link-orangegreen";
+                            a_link.innerHTML="刪除";
+                            var third_span = document.createElement("span");
+                            third_span.innerHTML=" x ";
+
+
+                            var wrap_orangegreen = document.createElement("div");
+                            wrap_orangegreen.id="scart-orangegreen";
+
+
+
+                          //connection
+                            sec_p.appendChild(first_span);
+                            sec_p.appendChild(third_span);
+                            sec_p.appendChild(sec_span);
+                            sec_p.appendChild(a_link);
+
+                            third_div.appendChild(first_p);
+                            third_div.appendChild(sec_p);
+
+                            sec_img_div.appendChild(img_cart);
+
+                            first_div.appendChild(sec_img_div);
+                            first_div.appendChild(third_div);
+
+
+                            wrap_orangegreen.appendChild(first_div);
+
+                            document.getElementById('scart-item-wrap').appendChild(wrap_orangegreen);
+
+
+
+                            //function add to delete
+
+                            document.getElementById("scart-remove-item-link-orangegreen").onclick = function() { deleteItemOrangegreen()};
+                          } else{
+                            document.getElementById("scart-quantity-orangegreen").innerHTML=localStorage.getItem("quantity_orangegreen");
+                          }
+
+
+
+
+
+
+                          var sum_price = total_price();
+                          var sum_quantity = total_quantity();
+                          //item price count
+                          document.getElementById('price-for-scart').innerHTML="HKD$ "+sum_price+".00";
+
+                          //item count
+                          document.getElementById('quantity-for-items').innerHTML=sum_quantity+" 件";
+                          document.getElementById("change-quantity").innerHTML=total_quantity();
+
+
+                          orangegreen_ordered=1;
+                          localStorage.setItem('orangegreen_ordered',orangegreen_ordered);
+                        }
+
+                      </script>
+                      <div class="product-detail-button-container">
+                        <button id="btn-add-to-cart" ng-show="!state.addonItemEnabled" class="no-vertical-margin btn btn-custom ladda-button js-btn-main-add-to-cart js-btn-show btn-color-primary" data-style="slide-down" ladda="loading" ng-disabled="false || addItemQuantity == '' || addItemQuantity == 0 || addItemQuantity < 0 || addItemQuantity > 99999" onclick="addItemToCart()">
+                            <span class="fa fa-shopping-cart"></span>
+                                            加入購物車
+                        </button>
+                      </div>、
+
+
+                      </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+<!-- end of No Variation && Add to Cart -->
+
+
+
+
+
+<!--right col end-->
+<!--right col end-->
+<!--right col end-->
+<!--right col end-->
+<!--right col end-->
+<!--right col end-->
+<!--right col end-->
+<!--right col end-->
+<!--right col end-->
+
+
+                <!-- Blacklist -->
+
+                <!-- End of blacklist -->
+                <div class="hidden-md hidden-lg">
+                    <!--Share actions-->
+                    <div class="share-box">
+                      <div class="action-title global-secondary">分享到</div>
+                      <div class="share-buttons">
+                      </div>
+                    </div>
+<!--End share actions-->
+
+                </div>
+
+              </div>  <!-- right side-->
+            </div>
+            <div ng-show="state.showStickyButton" class="js-sticky-cart-button-container"></div>
+            <!--main section end-->
+            <div class="clear"></div>
+
+            <!--description start-->
+
+            <div class="decription-wrapper">
+              <hr>
+              <h2 id="sec0" class="global-primary dark-primary">商品描述</h2>
+
+              <div ng-non-bindable="" class="global-secondary dark-secondary description-container">
+
+                <p>TBC</p>
+
+              </div>
+            </div>
+
+
+            <!--              這個商品沒有描述。
+            -->
+            <!--description end-->
+            <!--detail Media start-->
+
+            <!--description end-->
+
+            <!--customer reviews start-->
+            <div class="customer-reviews-wrapper">
+              <h2 id="product-review-section" class="global-primary dark-primary">
+                顧客評價
+              </h2>
+              <hr>
+              <div class="product-reviews-container">
+                <div class="review-summary-source ng-scope" ng-if="amazonProductReviewEnabled || productReviewEnabled"><!-- ngIf: amazonProductReviewEnabled || productReviewEnabled -->
+                  <select ng-change="setRatingSource(ratingSource)" ng-model="ratingSource" class="selectpicker js-selectpicker form-control form-control-sm form-control-inline ng-pristine ng-untouched ng-valid ng-not-empty">
+                    <option value="shopline" class="ng-binding" selected="selected">評價來源：此店</option>
+                  </select>
+                </div><!-- end ngIf: amazonProductReviewEnabled || productReviewEnabled -->
+
+                <shopline-product-review><!-- shopline product review -->
+                  <!-- ngIf: productReviewComments && ratingSource == 'shopline' -->
+                </shopline-product-review>
+
+
+                <div class="product-review-no-data ng-binding ng-scope" ng-if="shouldShowNoReviewsMsg()"><!-- ngIf: shouldShowNoReviewsMsg() -->
+                  尚未有任何評價
+                </div><!-- end ngIf: shouldShowNoReviewsMsg() -->
+              </div>
+              <hr>
+            </div>
+
+            <!--customer reviews end-->
+
+            <!--related products start-->
+            <div class="related-product-wrapper">
+              <h2 id="sec0" class="global-primary dark-primary">相關產品</h2>
+              <ul class="related-products boxify-container ">
+                  <li class="boxify-item product-item ">
+                    <product-item product-id="61bc61be57a4560014f71ec2" class="ng-scope">
+
+
+  <a href="/products/%E5%AF%B5%E7%89%A9%E9%BD%8A%E9%BD%8A%E9%A3%9F3-6%E4%BA%BA%E5%A5%97%E9%A4%90" ng-click="sendGaProductClick('61bc61be57a4560014f71ec2', '', [], 'SAMPLE')" product-id="61bc61be57a4560014f71ec2">
+    <div class="boxify-image-wrapper">
+      <div class="boxify-image center-contain sl-lazy-image  " style="background-image:url(../image/orangegreen.jpg)">
+
+      </div>
+    </div>
+  <div class="info-box" style="">
+    <div class="info-box-inner-wrapper">
+    <div class="title text-primary-color title-container ellipsis force-text-align-" ng-non-bindable="" style="word-wrap: break-word;">
+      SAMPLE
+
+    </div>
+
+
+
+    <!-- <div class="global-primary dark-primary price " >
+    </div>
+    <div class="price-sale">
+    </div> -->
+
+          <div class="global-primary dark-primary price price-crossed force-text-align-">
+          </div>
+            <div class="price-sale price force-text-align-">
+              HK$ TBC
+            </div>
+    </div>
+	</div>
+</a>
+
+
+
+                    </product-item>
+                  </li><!--li-->
+                                  <li class="boxify-item product-item ">
+                    <product-item product-id="61bc1513319234001da2c6ce" class="ng-scope">
+
+
+  <a href="/products/napoleon" ng-click="sendGaProductClick('61bc1513319234001da2c6ce', '', [&quot;{\&quot;key\&quot;:\&quot;61bc1513461d8c780e276ee9\&quot;,\&quot;sku\&quot;:null,\&quot;fields_translations\&quot;:{\&quot;en\&quot;:[\&quot;\&quot;,\&quot;\&quot;],\&quot;zh-hant\&quot;:[\&quot;莓莓\&quot;,\&quot;S (6件)\&quot;]}}&quot;], 'SAMPLE')" product-id="61bc1513319234001da2c6ce">
+    <div class="boxify-image-wrapper">
+      <div class="boxify-image center-contain sl-lazy-image  " style="background-image:url(../image/orangegreen.jpg)">
+
+      </div>
+    </div>
+  <div class="info-box" style="">
+    <div class="info-box-inner-wrapper">
+    <div class="title text-primary-color title-container ellipsis force-text-align-" ng-non-bindable="" style="word-wrap: break-word;">
+      SAMPLE
+
+    </div>
+
+
+
+    <!-- <div class="global-primary dark-primary price " >
+    </div>
+    <div class="price-sale">
+    </div> -->
+
+          <!-- variations -->
+            <div class="price-sale price force-text-align-" style="word-wrap: break-word; white-space: normal;">
+              HK$ TBC
+            </div>
+    </div>
+	</div>
+</a>
+
+
+
+                    </product-item>
+                  </li><!--li-->
+                                  <li class="boxify-item product-item ">
+                    <product-item product-id="61bbe57ea1396100231da881" class="ng-scope">
+
+
+  <a href="/products/25-30%E4%BA%BA%E6%96%B0%E5%B9%B4%E5%88%B0%E6%9C%83%E5%A5%97%E9%A4%90" ng-click="sendGaProductClick('61bbe57ea1396100231da881', '', [], 'SAMPLE')" product-id="61bbe57ea1396100231da881">
+    <div class="boxify-image-wrapper">
+      <div class="boxify-image center-contain sl-lazy-image  " style="background-image:url(../image/orangegreen.jpg)">
+
+      </div>
+    </div>
+  <div class="info-box" style="">
+    <div class="info-box-inner-wrapper">
+    <div class="title text-primary-color title-container ellipsis force-text-align-" ng-non-bindable="" style="word-wrap: break-word;">
+      SAMPLE
+
+    </div>
+
+
+
+    <!-- <div class="global-primary dark-primary price " >
+    </div>
+    <div class="price-sale">
+    </div> -->
+
+          <div class="global-primary dark-primary price price-crossed force-text-align-">
+          </div>
+            <div class="price-sale price force-text-align-">
+              HK$ TBC
+            </div>
+    </div>
+	</div>
+</a>
+
+
+
+                    </product-item>
+                  </li><!--li-->
+                                  <li class="boxify-item product-item ">
+                    <product-item product-id="61bb4a7195a418002f38cfbf" class="ng-scope">
+
+
+  <a href="/products/16-24%E4%BA%BA%E6%96%B0%E5%B9%B4%E5%88%B0%E6%9C%83%E5%A5%97%E9%A4%90" ng-click="sendGaProductClick('61bb4a7195a418002f38cfbf', '', [], 'SAMPLE')" product-id="61bb4a7195a418002f38cfbf">
+    <div class="boxify-image-wrapper">
+      <div class="boxify-image center-contain sl-lazy-image  " style="background-image:url(../image/orangegreen.jpg)">
+
+      </div>
+    </div>
+  <div class="info-box" style="">
+    <div class="info-box-inner-wrapper">
+    <div class="title text-primary-color title-container ellipsis force-text-align-" ng-non-bindable="" style="word-wrap: break-word;">
+      SAMPLE
+
+    </div>
+
+
+
+    <!-- <div class="global-primary dark-primary price " >
+    </div>
+    <div class="price-sale">
+    </div> -->
+
+          <div class="global-primary dark-primary price price-crossed force-text-align-">
+          </div>
+            <div class="price-sale price force-text-align-">
+              HK$ TBC
+            </div>
+    </div>
+	</div>
+</a>
+
+
+
+                    </product-item>
+                  </li><!--li-->
+                 <!--@products.each-->
+                <div class="clear"></div>
+              </ul><!--boxify-container-->
+            </div>
+
+            <!--related products end-->
+          </div>
+
+</div>
+<!--product content end-->
+
+
+
+
+
+
+
+<!--footer start-->
+
+
+
+<table  class="foot">
+    <tr class="one_row">
+      <td class="foot-lef-col">
+          <h4><span style="font-size:24px;">顧客服務</span></h4>
+          <p><a href="../pages/QnA.html" target="_self"><span>常見問題</span></a></p>
+          <p>​<a href="../pages/delivery.html" target="_self"><span>運送服務方式</span></a></p>
+          <p><a href="../pages/payment.html" target="_self"><span>付款服務方式</span></a></p>
+        </td>
+        <td class="foot-right-col">
+          <h4><span style="font-size:24px;">聯絡我們</span></h4>
+              <ul class="list-unstyled">
+                <li>電話:9887 7619(可whatsapp）</li>
+                <li>時間:12:00-22:00</li>
+                <li>電郵:info@aoaodelivery.com</li>
+              </ul>
+        </td>
+    </tr>
+  </table>
+  <br>
+  <table class="foot">
+    <tr class="warning-container">
+      <td class="warning-wrapper">
+          <p>* 圖片只供參考 *</p>
+          <p>* 未經許可，網站上的圖片及文章不得轉載或引用 *</p>
+          <p>即日外賣急單專線: 9887 7819 (可WhatsApp聯絡)</p>
+          <p>電郵: info@aoaodelivery.com</p>
+        </td>
+    </tr>
+    <tr>  <td class="image-footer">
+            <img alt="HKICL | 轉數快" src="https://www.hkma.gov.hk/media/chi/img/smart-consumers/fps_c.png">
+            <img alt="PAYME " src="https://static.wixstatic.com/media/576ba0_ab6e102b8afe49d59460133760e44e17~mv2.png/v1/fill/w_520,h_520,al_c,q_85,usm_0.66_1.00_0.01/logo_payme_en.webp">
+          </td>
+    </tr>
+    <tr>
+      <td>
+      <p class="text-center"><a href="../pages/aboutus.html" style="background-color: rgb(255, 255, 255); font-size: 16px;" target="_self"><span>關於我們</span></a> | <a href="../pages/terms.html" target="_self"><span>條款及細則 </span></a>| 2022 © AOAODELIVERY</p>
+    </td>
+    </tr>
+
+</table>
+<!--footer end-->
+  </body>
+</html>
